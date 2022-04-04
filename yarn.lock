@@ -1101,10 +1101,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@braintree/sanitize-url@^5.0.2":
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/@braintree/sanitize-url/-/sanitize-url-5.0.2.tgz#b23080fa35520e993a8a37a0f5bca26aa4650a48"
-  integrity sha512-NBEJlHWrhQucLhZGHtSxM2loSaNUMajC7KOYJLyfcdW/6goVoff2HoYI3bz8YCDN0wKGbxtUL0gx2dvHpvnWlw==
+"@braintree/sanitize-url@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@braintree/sanitize-url/-/sanitize-url-6.0.0.tgz#fe364f025ba74f6de6c837a84ef44bdb1d61e68f"
+  integrity sha512-mgmE7XBYY/21erpzhexk4Cj1cyTQ9LzvnTxtzM17BJ7ERMNE6W72mQRo0I1Ud8eFJ+RVVIcBNhLFZ3GX4XFz5w==
 
 "@changesets/apply-release-plan@^5.0.3":
   version "5.0.5"
@@ -1853,26 +1853,26 @@
   resolved "https://registry.yarnpkg.com/@keystone-6/document-renderer/-/document-renderer-1.0.0.tgz#afedf84bdfcce8130d6f33daa9e477b08d5bc40c"
   integrity sha512-mumjqZ+6+m9GhPauJTuRPRZGiZSbYOVJlqBvRmiEcndCuXiTucpyOWmANkIqDQFtPMOy0b13Elpx20mh8eUC6g==
 
-"@keystone-6/fields-document@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@keystone-6/fields-document/-/fields-document-1.0.1.tgz#d4ad90da33a3411100ed8d6669786f5084601c89"
-  integrity sha512-w/VvNH6JQ5R1k8Jnfa/QDsfJM28uTExEE6FJOmunbrZ5LrH0rWmaBz+7V4w712mnkbIut3hcVquAH9vNqGaSjQ==
+"@keystone-6/fields-document@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@keystone-6/fields-document/-/fields-document-2.0.0.tgz#94e9eb568012573b9b58d62baec1ae7536a4015f"
+  integrity sha512-nzdv0Pd1ad599Wi/NpPq/f+w6swDUWixijBsuwmzKgo8vXGfZDBL5TVlarji71aJ1j1jl248z9G4HwvY/53WPw==
   dependencies:
     "@babel/runtime" "^7.16.3"
-    "@braintree/sanitize-url" "^5.0.2"
+    "@braintree/sanitize-url" "^6.0.0"
     "@emotion/weak-memoize" "^0.2.5"
     "@keystone-6/document-renderer" "^1.0.0"
     "@keystone-ui/button" "^6.0.0"
     "@keystone-ui/core" "^4.0.0"
-    "@keystone-ui/fields" "^6.0.0"
+    "@keystone-ui/fields" "^6.0.1"
     "@keystone-ui/icons" "^5.0.0"
-    "@keystone-ui/popover" "^5.0.0"
+    "@keystone-ui/popover" "^5.0.1"
     "@keystone-ui/tooltip" "^5.0.0"
-    "@types/react" "^17.0.35"
+    "@types/react" "^17.0.37"
     apollo-server-errors "^3.3.0"
     apply-ref "^1.0.0"
     fp-ts "^2.11.5"
-    graphql "^15.7.2"
+    graphql "^15.8.0"
     io-ts "^2.2.16"
     io-ts-excess "^1.0.1"
     is-hotkey "^0.2.0"
@@ -1923,6 +1923,21 @@
     react "^17.0.2"
     react-day-picker "npm:react-day-picker@^7.4.8"
     react-focus-lock "^2.6.0"
+    react-select "^5.2.1"
+
+"@keystone-ui/fields@^6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@keystone-ui/fields/-/fields-6.0.1.tgz#11242a2291b66716278cfdcc5ea67d86cdfe6410"
+  integrity sha512-rDAoihrNlkg76FvNd/vk/SeZyN3JmWxCBQVnOkmecKPxPPsxAJdeaKXdRv6IQZ2CgMGGB0lm6RdTagpfWukyMA==
+  dependencies:
+    "@babel/runtime" "^7.16.3"
+    "@keystone-ui/core" "^4.0.0"
+    "@keystone-ui/icons" "^5.0.0"
+    "@keystone-ui/popover" "^5.0.1"
+    date-fns "^2.26.0"
+    react "^17.0.2"
+    react-day-picker "npm:react-day-picker@^7.4.8"
+    react-focus-lock "^2.7.1"
     react-select "^5.2.1"
 
 "@keystone-ui/icons@^5.0.0":
@@ -1990,6 +2005,17 @@
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/@keystone-ui/popover/-/popover-5.0.0.tgz#03ed3b0ce692d0afa5a9c84a492848cea4b632da"
   integrity sha512-8dJak1SjGs0jHboY+P6CFb0TfRsLMmq/UrX3+DFEWcRUFTvNigPGzVvsCxHsl2xNVmjW4ardKFS4bY8bhlG6gw==
+  dependencies:
+    "@babel/runtime" "^7.16.3"
+    "@keystone-ui/core" "^4.0.0"
+    "@popperjs/core" "^2.10.2"
+    focus-trap "^6.7.1"
+    react-popper "^2.2.5"
+
+"@keystone-ui/popover@^5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@keystone-ui/popover/-/popover-5.0.1.tgz#9fa54d73dc257c707887d574ba4181d4d047778d"
+  integrity sha512-616HJ2tUYi/tx46GiN6YhCBkNbL1l1idn80B50QJWOVl2F68lhJoa59+pOcQpdg9Ldjq0CHaNSFfHyoRNJuu5w==
   dependencies:
     "@babel/runtime" "^7.16.3"
     "@keystone-ui/core" "^4.0.0"
@@ -3113,7 +3139,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@>=16.14.8", "@types/react@>=16.9.11", "@types/react@^17.0.35", "@types/react@^17.0.37":
+"@types/react@*", "@types/react@>=16.14.8", "@types/react@>=16.9.11", "@types/react@^17.0.37":
   version "17.0.40"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.40.tgz#dc010cee6254d5239a138083f3799a16638e6bad"
   integrity sha512-UrXhD/JyLH+W70nNSufXqMZNuUD2cXHu6UjCllC6pmOQgBX4SGXOH8fjRka0O0Ee0HrFxapDD8Bwn81Kmiz6jQ==
@@ -9116,7 +9142,7 @@ react-fast-compare@^3.0.1:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.0.tgz#641a9da81b6a6320f270e89724fb45a0b39e43bb"
   integrity sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==
 
-react-focus-lock@^2.6.0:
+react-focus-lock@^2.6.0, react-focus-lock@^2.7.1:
   version "2.8.1"
   resolved "https://registry.yarnpkg.com/react-focus-lock/-/react-focus-lock-2.8.1.tgz#a28f06a4ef5eab7d4ef0d859512772ec1331d529"
   integrity sha512-4kb9I7JIiBm0EJ+CsIBQ+T1t5qtmwPRbFGYFQ0t2q2qIpbFbYTHDjnjJVFB7oMBtXityEOQehblJPjqSIf3Amg==

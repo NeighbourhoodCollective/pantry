@@ -171,7 +171,7 @@ importers:
     specifiers:
       '@emotion/css': ^11.7.1
       '@keystone-6/core': 1.0.1
-      '@keystone-6/fields-document': 1.0.1
+      '@keystone-6/fields-document': 2.0.0
       '@keystone-ui/button': ^6.0.0
       '@keystone-ui/fields': ^6.0.0
       '@keystone-ui/icons': ^5.0.0
@@ -186,7 +186,7 @@ importers:
     dependencies:
       '@emotion/css': 11.7.1_@babel+core@7.17.5
       '@keystone-6/core': 1.0.1
-      '@keystone-6/fields-document': 1.0.1_bd454601447a7ddb93012947c5e8463d
+      '@keystone-6/fields-document': 2.0.0_bd454601447a7ddb93012947c5e8463d
       '@keystone-ui/button': 6.0.0_@babel+core@7.17.5
       '@keystone-ui/fields': 6.0.0_@babel+core@7.17.5
       '@keystone-ui/icons': 5.0.0_@babel+core@7.17.5
@@ -1617,9 +1617,8 @@ packages:
   /@bcoe/v8-coverage/0.2.3:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
 
-  /@braintree/sanitize-url/5.0.2:
-    resolution: {integrity: sha512-NBEJlHWrhQucLhZGHtSxM2loSaNUMajC7KOYJLyfcdW/6goVoff2HoYI3bz8YCDN0wKGbxtUL0gx2dvHpvnWlw==}
-    deprecated: Potential XSS vulnerability patched in v6.0.0.
+  /@braintree/sanitize-url/6.0.0:
+    resolution: {integrity: sha512-mgmE7XBYY/21erpzhexk4Cj1cyTQ9LzvnTxtzM17BJ7ERMNE6W72mQRo0I1Ud8eFJ+RVVIcBNhLFZ3GX4XFz5w==}
     dev: false
 
   /@changesets/apply-release-plan/5.0.5:
@@ -2433,22 +2432,22 @@ packages:
       react: 17.0.2
     dev: false
 
-  /@keystone-6/fields-document/1.0.1_bd454601447a7ddb93012947c5e8463d:
-    resolution: {integrity: sha512-w/VvNH6JQ5R1k8Jnfa/QDsfJM28uTExEE6FJOmunbrZ5LrH0rWmaBz+7V4w712mnkbIut3hcVquAH9vNqGaSjQ==}
+  /@keystone-6/fields-document/2.0.0_bd454601447a7ddb93012947c5e8463d:
+    resolution: {integrity: sha512-nzdv0Pd1ad599Wi/NpPq/f+w6swDUWixijBsuwmzKgo8vXGfZDBL5TVlarji71aJ1j1jl248z9G4HwvY/53WPw==}
     engines: {node: ^14.15 || ^16.13}
     peerDependencies:
-      '@keystone-6/core': ^1.0.0
+      '@keystone-6/core': ^1.1.0
     dependencies:
       '@babel/runtime': 7.17.2
-      '@braintree/sanitize-url': 5.0.2
+      '@braintree/sanitize-url': 6.0.0
       '@emotion/weak-memoize': 0.2.5
       '@keystone-6/core': 1.0.1
       '@keystone-6/document-renderer': 1.0.0_react@17.0.2
       '@keystone-ui/button': 6.0.0_6148a7759cbac490f358bffca7aa1572
       '@keystone-ui/core': 4.0.0_bf389bc9d9c898d23b26c0366b4e1ca7
-      '@keystone-ui/fields': 6.0.0_6148a7759cbac490f358bffca7aa1572
+      '@keystone-ui/fields': 6.0.1_6148a7759cbac490f358bffca7aa1572
       '@keystone-ui/icons': 5.0.0_bf389bc9d9c898d23b26c0366b4e1ca7
-      '@keystone-ui/popover': 5.0.0_bf389bc9d9c898d23b26c0366b4e1ca7
+      '@keystone-ui/popover': 5.0.1_bf389bc9d9c898d23b26c0366b4e1ca7
       '@keystone-ui/tooltip': 5.0.0_bf389bc9d9c898d23b26c0366b4e1ca7
       '@types/react': 17.0.40
       apollo-server-errors: 3.3.1_graphql@15.8.0
@@ -2622,25 +2621,6 @@ packages:
       - '@types/react'
     dev: false
 
-  /@keystone-ui/fields/6.0.0_6148a7759cbac490f358bffca7aa1572:
-    resolution: {integrity: sha512-pFw09oBMxa3mHo/ZWQ9XSityno5kdcFUc6qWGGrxhDK3a7eC8MHmxj6KKDuXIGGN2IgK+6fgWmrWqUoPNoJXPg==}
-    engines: {node: ^14.15 || ^16.13}
-    dependencies:
-      '@babel/runtime': 7.17.2
-      '@keystone-ui/core': 4.0.0_bf389bc9d9c898d23b26c0366b4e1ca7
-      '@keystone-ui/icons': 5.0.0_bf389bc9d9c898d23b26c0366b4e1ca7
-      '@keystone-ui/popover': 5.0.0_bf389bc9d9c898d23b26c0366b4e1ca7
-      date-fns: 2.28.0
-      react: 17.0.2
-      react-day-picker: 7.4.10_react@17.0.2
-      react-focus-lock: 2.8.1_00d6772dea80510e818fd171caaa025a
-      react-select: 5.2.2_bf389bc9d9c898d23b26c0366b4e1ca7
-    transitivePeerDependencies:
-      - '@babel/core'
-      - '@types/react'
-      - react-dom
-    dev: false
-
   /@keystone-ui/fields/6.0.0_@babel+core@7.17.5:
     resolution: {integrity: sha512-pFw09oBMxa3mHo/ZWQ9XSityno5kdcFUc6qWGGrxhDK3a7eC8MHmxj6KKDuXIGGN2IgK+6fgWmrWqUoPNoJXPg==}
     engines: {node: ^14.15 || ^16.13}
@@ -2692,6 +2672,44 @@ packages:
       react-day-picker: 7.4.10_react@17.0.2
       react-focus-lock: 2.8.1_react@17.0.2
       react-select: 5.2.2_33bdac975a6e334c49640fab91e2abb4
+    transitivePeerDependencies:
+      - '@babel/core'
+      - '@types/react'
+      - react-dom
+    dev: false
+
+  /@keystone-ui/fields/6.0.1_6148a7759cbac490f358bffca7aa1572:
+    resolution: {integrity: sha512-rDAoihrNlkg76FvNd/vk/SeZyN3JmWxCBQVnOkmecKPxPPsxAJdeaKXdRv6IQZ2CgMGGB0lm6RdTagpfWukyMA==}
+    engines: {node: ^14.15 || ^16.13}
+    dependencies:
+      '@babel/runtime': 7.17.2
+      '@keystone-ui/core': 4.0.0_bf389bc9d9c898d23b26c0366b4e1ca7
+      '@keystone-ui/icons': 5.0.0_bf389bc9d9c898d23b26c0366b4e1ca7
+      '@keystone-ui/popover': 5.0.1_bf389bc9d9c898d23b26c0366b4e1ca7
+      date-fns: 2.28.0
+      react: 17.0.2
+      react-day-picker: 7.4.10_react@17.0.2
+      react-focus-lock: 2.8.1_00d6772dea80510e818fd171caaa025a
+      react-select: 5.2.2_bf389bc9d9c898d23b26c0366b4e1ca7
+    transitivePeerDependencies:
+      - '@babel/core'
+      - '@types/react'
+      - react-dom
+    dev: false
+
+  /@keystone-ui/fields/6.0.1_e971def2693fa3cfa8184276950afb3f:
+    resolution: {integrity: sha512-rDAoihrNlkg76FvNd/vk/SeZyN3JmWxCBQVnOkmecKPxPPsxAJdeaKXdRv6IQZ2CgMGGB0lm6RdTagpfWukyMA==}
+    engines: {node: ^14.15 || ^16.13}
+    dependencies:
+      '@babel/runtime': 7.17.2
+      '@keystone-ui/core': 4.0.0_8907d3b1e0d8f348c15a63b08800c240
+      '@keystone-ui/icons': 5.0.0_8907d3b1e0d8f348c15a63b08800c240
+      '@keystone-ui/popover': 5.0.1_8907d3b1e0d8f348c15a63b08800c240
+      date-fns: 2.28.0
+      react: 17.0.2
+      react-day-picker: 7.4.10_react@17.0.2
+      react-focus-lock: 2.8.1_00d6772dea80510e818fd171caaa025a
+      react-select: 5.2.2_8907d3b1e0d8f348c15a63b08800c240
     transitivePeerDependencies:
       - '@babel/core'
       - '@types/react'
@@ -2864,7 +2882,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.17.2
       '@keystone-ui/core': 4.0.0_8907d3b1e0d8f348c15a63b08800c240
-      '@keystone-ui/fields': 6.0.0_e971def2693fa3cfa8184276950afb3f
+      '@keystone-ui/fields': 6.0.1_e971def2693fa3cfa8184276950afb3f
       '@keystone-ui/icons': 5.0.0_8907d3b1e0d8f348c15a63b08800c240
       react: 17.0.2
       react-select: 5.2.2_8907d3b1e0d8f348c15a63b08800c240
@@ -2946,8 +2964,27 @@ packages:
       - '@types/react'
     dev: false
 
-  /@keystone-ui/popover/5.0.0_bf389bc9d9c898d23b26c0366b4e1ca7:
-    resolution: {integrity: sha512-8dJak1SjGs0jHboY+P6CFb0TfRsLMmq/UrX3+DFEWcRUFTvNigPGzVvsCxHsl2xNVmjW4ardKFS4bY8bhlG6gw==}
+  /@keystone-ui/popover/5.0.1_8907d3b1e0d8f348c15a63b08800c240:
+    resolution: {integrity: sha512-616HJ2tUYi/tx46GiN6YhCBkNbL1l1idn80B50QJWOVl2F68lhJoa59+pOcQpdg9Ldjq0CHaNSFfHyoRNJuu5w==}
+    engines: {node: ^14.15 || ^16.13}
+    peerDependencies:
+      react: ^17.0.2
+      react-dom: ^17.0.2
+    dependencies:
+      '@babel/runtime': 7.17.2
+      '@keystone-ui/core': 4.0.0_8907d3b1e0d8f348c15a63b08800c240
+      '@popperjs/core': 2.11.4
+      focus-trap: 6.7.3
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      react-popper: 2.2.5_2e9dd80dbd4df675244d857293d4c5b0
+    transitivePeerDependencies:
+      - '@babel/core'
+      - '@types/react'
+    dev: false
+
+  /@keystone-ui/popover/5.0.1_bf389bc9d9c898d23b26c0366b4e1ca7:
+    resolution: {integrity: sha512-616HJ2tUYi/tx46GiN6YhCBkNbL1l1idn80B50QJWOVl2F68lhJoa59+pOcQpdg9Ldjq0CHaNSFfHyoRNJuu5w==}
     engines: {node: ^14.15 || ^16.13}
     peerDependencies:
       react: ^17.0.2
@@ -3004,7 +3041,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.17.2
       '@keystone-ui/core': 4.0.0_8907d3b1e0d8f348c15a63b08800c240
-      '@keystone-ui/popover': 5.0.0_8907d3b1e0d8f348c15a63b08800c240
+      '@keystone-ui/popover': 5.0.1_8907d3b1e0d8f348c15a63b08800c240
       apply-ref: 1.0.0
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
@@ -3022,7 +3059,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.17.2
       '@keystone-ui/core': 4.0.0_bf389bc9d9c898d23b26c0366b4e1ca7
-      '@keystone-ui/popover': 5.0.0_bf389bc9d9c898d23b26c0366b4e1ca7
+      '@keystone-ui/popover': 5.0.1_bf389bc9d9c898d23b26c0366b4e1ca7
       apply-ref: 1.0.0
       react: 17.0.2
     transitivePeerDependencies:
