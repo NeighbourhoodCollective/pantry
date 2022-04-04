@@ -51,7 +51,7 @@ importers:
       '@keystone-ui/fields': ^6.0.0
       '@keystone-ui/icons': ^5.0.0
       '@next/bundle-analyzer': ^12.0.10
-      '@preconstruct/next': ^3.0.1
+      '@preconstruct/next': ^4.0.0
       '@stripe/react-stripe-js': ^1.7.0
       '@stripe/stripe-js': ^1.23.0
       '@testing-library/jest-dom': ^5.15.1
@@ -116,7 +116,7 @@ importers:
       '@keystone-ui/fields': 6.0.0_ee04cb8b04d49922efd65b2acc3d5fcc
       '@keystone-ui/icons': 5.0.0_33bdac975a6e334c49640fab91e2abb4
       '@next/bundle-analyzer': 12.1.0
-      '@preconstruct/next': 3.0.1
+      '@preconstruct/next': 4.0.0
       '@stripe/react-stripe-js': 1.7.0_2272d46cfb55a1a89dee55cd5776c81d
       '@stripe/stripe-js': 1.24.0
       apollo-upload-client: 17.0.0_86c0c2be7d9b17882f85cdf8389aaf41
@@ -3361,6 +3361,10 @@ packages:
 
   /@preconstruct/next/3.0.1:
     resolution: {integrity: sha512-b9q1US5vsUzHPeMGlCFGWdttAHQ2q6raFlY1vf5binrKMkki/gt6GvskTJ4RXfFCt7QmVx9tRcuTFXMhUDgb6A==}
+    dev: false
+
+  /@preconstruct/next/4.0.0:
+    resolution: {integrity: sha512-vSrc8wFQgBErU7dKTKSQtr/DLWPHcN9jMoiWOAQodB1+B4Kpqqry6QhGYoRm0DQU5gNL+Rcp+Xb350O1E/gjsg==}
     dev: false
 
   /@prisma/client/3.6.0_prisma@3.6.0:
