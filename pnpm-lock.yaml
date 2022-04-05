@@ -175,7 +175,7 @@ importers:
       '@keystone-ui/button': ^6.0.0
       '@keystone-ui/fields': ^6.0.0
       '@keystone-ui/icons': ^5.0.0
-      '@opensaas/keystone-nextjs-auth': 20.4.0
+      '@opensaas/keystone-nextjs-auth': 21.0.0
       '@sendgrid/mail': 7.6.1
       cuid: 2.1.8
       dotenv: 16.0.0
@@ -190,7 +190,7 @@ importers:
       '@keystone-ui/button': 6.0.0_@babel+core@7.17.5
       '@keystone-ui/fields': 6.0.0_@babel+core@7.17.5
       '@keystone-ui/icons': 5.0.0_@babel+core@7.17.5
-      '@opensaas/keystone-nextjs-auth': 20.4.0_@keystone-6+core@1.0.1
+      '@opensaas/keystone-nextjs-auth': 21.0.0_@keystone-6+core@1.0.1
       '@sendgrid/mail': 7.6.1
       cuid: 2.1.8
       dotenv: 16.0.0
@@ -1543,6 +1543,14 @@ packages:
       core-js-pure: 3.21.1
       regenerator-runtime: 0.13.9
 
+  /@babel/runtime-corejs3/7.17.8:
+    resolution: {integrity: sha512-ZbYSUvoSF6dXZmMl/CYTMOvzIFnbGfv4W3SEHYgMvNsFTeLaF2gkGAF4K2ddmtSK4Emej+0aYcnSC6N5dPCXUQ==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      core-js-pure: 3.21.1
+      regenerator-runtime: 0.13.9
+    dev: false
+
   /@babel/runtime/7.15.4:
     resolution: {integrity: sha512-99catp6bHCaxr4sJ/DbTGgHS4+Rs2RVd2g7iOap6SLGPDknRK9ztKNsE/Fg6QhSeh1FGE5f6gHGQmvvn3I3xhw==}
     engines: {node: '>=6.9.0'}
@@ -1555,6 +1563,13 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.13.9
+
+  /@babel/runtime/7.17.8:
+    resolution: {integrity: sha512-dQpEpK0O9o6lj6oPu0gRDbbnk+4LeHlNcBpspf6Olzt3GIX4P1lWF1gS+pHLDFlaJvbR6q7jCfQ08zA4QJBnmA==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      regenerator-runtime: 0.13.9
+    dev: false
 
   /@babel/template/7.16.7:
     resolution: {integrity: sha512-I8j/x8kHUrbYRTUxXrrMbfCa7jxkE7tZre39x3kjr9hvI82cK1FfqLygotcWN5kdPGWcLdWMHpSBavse5tWw3w==}
@@ -1874,7 +1889,7 @@ packages:
         optional: true
     dependencies:
       '@babel/core': 7.17.5
-      '@babel/runtime': 7.17.2
+      '@babel/runtime': 7.17.8
       '@emotion/babel-plugin': 11.7.2_@babel+core@7.17.5
       '@emotion/cache': 11.7.1
       '@emotion/serialize': 1.0.2
@@ -1896,7 +1911,7 @@ packages:
         optional: true
     dependencies:
       '@babel/core': 7.17.5
-      '@babel/runtime': 7.17.2
+      '@babel/runtime': 7.17.8
       '@emotion/babel-plugin': 11.7.2_@babel+core@7.17.5
       '@emotion/cache': 11.7.1
       '@emotion/serialize': 1.0.2
@@ -1919,7 +1934,7 @@ packages:
         optional: true
     dependencies:
       '@babel/core': 7.17.5
-      '@babel/runtime': 7.17.2
+      '@babel/runtime': 7.17.8
       '@emotion/babel-plugin': 11.7.2_@babel+core@7.17.5
       '@emotion/cache': 11.7.1
       '@emotion/serialize': 1.0.2
@@ -2025,7 +2040,7 @@ packages:
       '@graphql-ts/schema': ^0.5.0
       graphql: ^15.0.0
     dependencies:
-      '@babel/runtime': 7.17.2
+      '@babel/runtime': 7.17.8
       '@graphql-ts/schema': 0.5.0_graphql@15.8.0
       graphql: 15.8.0
     dev: false
@@ -2035,7 +2050,7 @@ packages:
     peerDependencies:
       graphql: ^15.0.0
     dependencies:
-      '@babel/runtime': 7.17.2
+      '@babel/runtime': 7.17.8
       graphql: 15.8.0
     dev: false
 
@@ -2543,7 +2558,7 @@ packages:
       react: ^17.0.2
       react-dom: ^17.0.2
     dependencies:
-      '@babel/runtime': 7.17.2
+      '@babel/runtime': 7.17.8
       '@emotion/react': 11.8.2_@babel+core@7.17.5+react@17.0.2
       '@types/facepaint': 1.2.2
       facepaint: 1.2.1
@@ -2561,7 +2576,7 @@ packages:
       react: ^17.0.2
       react-dom: ^17.0.2
     dependencies:
-      '@babel/runtime': 7.17.2
+      '@babel/runtime': 7.17.8
       '@emotion/react': 11.8.2_bf389bc9d9c898d23b26c0366b4e1ca7
       '@types/facepaint': 1.2.2
       facepaint: 1.2.1
@@ -2579,7 +2594,7 @@ packages:
       react: ^17.0.2
       react-dom: ^17.0.2
     dependencies:
-      '@babel/runtime': 7.17.2
+      '@babel/runtime': 7.17.8
       '@emotion/react': 11.8.2_@babel+core@7.17.5
       '@types/facepaint': 1.2.2
       facepaint: 1.2.1
@@ -2595,7 +2610,7 @@ packages:
       react: ^17.0.2
       react-dom: ^17.0.2
     dependencies:
-      '@babel/runtime': 7.17.2
+      '@babel/runtime': 7.17.8
       '@emotion/react': 11.8.2_@babel+core@7.17.5+react@17.0.2
       '@types/facepaint': 1.2.2
       facepaint: 1.2.1
@@ -2612,7 +2627,7 @@ packages:
       react: ^17.0.2
       react-dom: ^17.0.2
     dependencies:
-      '@babel/runtime': 7.17.2
+      '@babel/runtime': 7.17.8
       '@emotion/react': 11.8.2_bf389bc9d9c898d23b26c0366b4e1ca7
       '@types/facepaint': 1.2.2
       facepaint: 1.2.1
@@ -2776,7 +2791,7 @@ packages:
     resolution: {integrity: sha512-oEF1ggDbvrShFqeHDdTyBz0GLra6LRKwDID1FyWYoR2MxI3R6Mtw/bK+7ejKgAYCzGu0bZbcIFiZTF2vWrJYmQ==}
     engines: {node: ^14.15 || ^16.13}
     dependencies:
-      '@babel/runtime': 7.17.2
+      '@babel/runtime': 7.17.8
       '@keystone-ui/core': 4.0.0_bf389bc9d9c898d23b26c0366b4e1ca7
       react: 17.0.2
     transitivePeerDependencies:
@@ -2789,7 +2804,7 @@ packages:
     resolution: {integrity: sha512-oEF1ggDbvrShFqeHDdTyBz0GLra6LRKwDID1FyWYoR2MxI3R6Mtw/bK+7ejKgAYCzGu0bZbcIFiZTF2vWrJYmQ==}
     engines: {node: ^14.15 || ^16.13}
     dependencies:
-      '@babel/runtime': 7.17.2
+      '@babel/runtime': 7.17.8
       '@keystone-ui/core': 4.0.0_@babel+core@7.17.5+react@17.0.2
       react: 17.0.2
     transitivePeerDependencies:
@@ -2802,7 +2817,7 @@ packages:
     resolution: {integrity: sha512-oEF1ggDbvrShFqeHDdTyBz0GLra6LRKwDID1FyWYoR2MxI3R6Mtw/bK+7ejKgAYCzGu0bZbcIFiZTF2vWrJYmQ==}
     engines: {node: ^14.15 || ^16.13}
     dependencies:
-      '@babel/runtime': 7.17.2
+      '@babel/runtime': 7.17.8
       '@keystone-ui/core': 4.0.0_8907d3b1e0d8f348c15a63b08800c240
       react: 17.0.2
     transitivePeerDependencies:
@@ -2815,7 +2830,7 @@ packages:
     resolution: {integrity: sha512-oEF1ggDbvrShFqeHDdTyBz0GLra6LRKwDID1FyWYoR2MxI3R6Mtw/bK+7ejKgAYCzGu0bZbcIFiZTF2vWrJYmQ==}
     engines: {node: ^14.15 || ^16.13}
     dependencies:
-      '@babel/runtime': 7.17.2
+      '@babel/runtime': 7.17.8
       '@keystone-ui/core': 4.0.0_33bdac975a6e334c49640fab91e2abb4
       react: 17.0.2
     transitivePeerDependencies:
@@ -2828,7 +2843,7 @@ packages:
     resolution: {integrity: sha512-019wPldQ/n2e+9l4cNcZiPZHWSbKnLD/gD95gyJpTT1ls2Po2Fo7dFxjhiQi7Vq3g7BV/gkvOsEuU9hJApA8Yw==}
     engines: {node: ^14.15 || ^16.13}
     dependencies:
-      '@babel/runtime': 7.17.2
+      '@babel/runtime': 7.17.8
       '@keystone-ui/button': 6.0.0_e971def2693fa3cfa8184276950afb3f
       '@keystone-ui/core': 4.0.0_8907d3b1e0d8f348c15a63b08800c240
       react: 17.0.2
@@ -2845,7 +2860,7 @@ packages:
     resolution: {integrity: sha512-jPqzECwjzCGfv4q4RMLIjrZxl2aF50AwCI1cg5SMps2oH6ayURSZsPgjxrKJMwkNSNT5Kg2lf3Yk/Pj9XaTqOA==}
     engines: {node: ^14.15 || ^16.13}
     dependencies:
-      '@babel/runtime': 7.17.2
+      '@babel/runtime': 7.17.8
       '@keystone-ui/button': 6.0.0_e971def2693fa3cfa8184276950afb3f
       '@keystone-ui/core': 4.0.0_8907d3b1e0d8f348c15a63b08800c240
       '@keystone-ui/icons': 5.0.0_8907d3b1e0d8f348c15a63b08800c240
@@ -2862,7 +2877,7 @@ packages:
     peerDependencies:
       react: ^17.0.2
     dependencies:
-      '@babel/runtime': 7.17.2
+      '@babel/runtime': 7.17.8
       '@keystone-ui/core': 4.0.0_8907d3b1e0d8f348c15a63b08800c240
       '@keystone-ui/fields': 6.0.0_e971def2693fa3cfa8184276950afb3f
       '@keystone-ui/icons': 5.0.0_8907d3b1e0d8f348c15a63b08800c240
@@ -2880,7 +2895,7 @@ packages:
     peerDependencies:
       react: ^17.0.2
     dependencies:
-      '@babel/runtime': 7.17.2
+      '@babel/runtime': 7.17.8
       '@keystone-ui/core': 4.0.0_8907d3b1e0d8f348c15a63b08800c240
       '@keystone-ui/icons': 5.0.0_8907d3b1e0d8f348c15a63b08800c240
       react: 17.0.2
@@ -2897,7 +2912,7 @@ packages:
       react: ^17.0.2
       react-dom: ^17.0.2
     dependencies:
-      '@babel/runtime': 7.17.2
+      '@babel/runtime': 7.17.8
       '@keystone-ui/core': 4.0.0_33bdac975a6e334c49640fab91e2abb4
       '@popperjs/core': 2.11.4
       focus-trap: 6.7.3
@@ -2916,7 +2931,7 @@ packages:
       react: ^17.0.2
       react-dom: ^17.0.2
     dependencies:
-      '@babel/runtime': 7.17.2
+      '@babel/runtime': 7.17.8
       '@keystone-ui/core': 4.0.0_8907d3b1e0d8f348c15a63b08800c240
       '@popperjs/core': 2.11.4
       focus-trap: 6.7.3
@@ -2935,7 +2950,7 @@ packages:
       react: ^17.0.2
       react-dom: ^17.0.2
     dependencies:
-      '@babel/runtime': 7.17.2
+      '@babel/runtime': 7.17.8
       '@keystone-ui/core': 4.0.0_@babel+core@7.17.5+react@17.0.2
       '@popperjs/core': 2.11.4
       focus-trap: 6.7.3
@@ -2953,7 +2968,7 @@ packages:
       react: ^17.0.2
       react-dom: ^17.0.2
     dependencies:
-      '@babel/runtime': 7.17.2
+      '@babel/runtime': 7.17.8
       '@keystone-ui/core': 4.0.0_bf389bc9d9c898d23b26c0366b4e1ca7
       '@popperjs/core': 2.11.4
       focus-trap: 6.7.3
@@ -2970,7 +2985,7 @@ packages:
     peerDependencies:
       react: ^17.0.2
     dependencies:
-      '@babel/runtime': 7.17.2
+      '@babel/runtime': 7.17.8
       '@keystone-ui/core': 4.0.0_8907d3b1e0d8f348c15a63b08800c240
       react: 17.0.2
     transitivePeerDependencies:
@@ -2985,7 +3000,7 @@ packages:
     peerDependencies:
       react: ^17.0.2
     dependencies:
-      '@babel/runtime': 7.17.2
+      '@babel/runtime': 7.17.8
       '@keystone-ui/core': 4.0.0_8907d3b1e0d8f348c15a63b08800c240
       '@keystone-ui/icons': 5.0.0_8907d3b1e0d8f348c15a63b08800c240
       react: 17.0.2
@@ -3002,7 +3017,7 @@ packages:
       react: ^17.0.2
       react-dom: ^17.0.2
     dependencies:
-      '@babel/runtime': 7.17.2
+      '@babel/runtime': 7.17.8
       '@keystone-ui/core': 4.0.0_8907d3b1e0d8f348c15a63b08800c240
       '@keystone-ui/popover': 5.0.0_8907d3b1e0d8f348c15a63b08800c240
       apply-ref: 1.0.0
@@ -3020,7 +3035,7 @@ packages:
       react: ^17.0.2
       react-dom: ^17.0.2
     dependencies:
-      '@babel/runtime': 7.17.2
+      '@babel/runtime': 7.17.8
       '@keystone-ui/core': 4.0.0_bf389bc9d9c898d23b26c0366b4e1ca7
       '@keystone-ui/popover': 5.0.0_bf389bc9d9c898d23b26c0366b4e1ca7
       apply-ref: 1.0.0
@@ -3268,15 +3283,15 @@ packages:
       fastq: 1.13.0
     dev: false
 
-  /@opensaas/keystone-nextjs-auth/20.4.0_@keystone-6+core@1.0.1:
-    resolution: {integrity: sha512-kBiHfKKBoNSr0Ps+IbVlKRr+8434RXKeeFx0tH0n9J+MaITzZaU+AfTa95BnX4qCAYTUfiHR5c5sjP59Njdsxg==}
+  /@opensaas/keystone-nextjs-auth/21.0.0_@keystone-6+core@1.0.1:
+    resolution: {integrity: sha512-cCIFYzE/eeLBDXM0D3L4TRugPdo3xW73D/nplihC4HjvA0HU4mMYsFOT/hifZd71ONfKijylYS2nVOY5Eu9H1g==}
     engines: {node: ^12.20 || >= 14.13}
     peerDependencies:
-      '@keystone-6/core': ^1.0.1
+      '@keystone-6/core': ^1.1.0
       react: ^17.0.2
     dependencies:
-      '@babel/runtime': 7.17.2
-      '@babel/runtime-corejs3': 7.17.2
+      '@babel/runtime': 7.17.8
+      '@babel/runtime-corejs3': 7.17.8
       '@keystone-6/core': 1.0.1
       '@types/ejs': 3.1.0
       cookie: 0.4.2
@@ -3284,7 +3299,7 @@ packages:
       ejs: 3.1.6
       fast-deep-equal: 3.1.3
       graphql: 15.8.0
-      next-auth: 4.2.1
+      next-auth: 4.3.1
     transitivePeerDependencies:
       - encoding
       - nodemailer
@@ -9129,7 +9144,7 @@ packages:
   /match-sorter/6.3.1:
     resolution: {integrity: sha512-mxybbo3pPNuA+ZuCUhm5bwNkXrJTbsk5VWbR5wiwz/GC6LIiegBGn2w3O08UG/jdbYLinw51fSQ5xNU1U3MgBw==}
     dependencies:
-      '@babel/runtime': 7.17.2
+      '@babel/runtime': 7.17.8
       remove-accents: 0.4.2
     dev: false
 
@@ -9506,28 +9521,6 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /next-auth/4.2.1:
-    resolution: {integrity: sha512-XDtt7nqevkNf4EJ2zKAKkI+MFsURf11kx11vPwxrBYA1MHeqWwaWbGOUOI2ekNTvfAg4nTEJJUH3LV2cLrH3Tg==}
-    engines: {node: ^12.19.0 || ^14.15.0 || ^16.13.0}
-    peerDependencies:
-      nodemailer: ^6.6.5
-      react: ^17.0.2 || ^18.0.0-0
-      react-dom: ^17.0.2 || ^18.0.0-0
-    peerDependenciesMeta:
-      nodemailer:
-        optional: true
-    dependencies:
-      '@babel/runtime': 7.17.2
-      '@panva/hkdf': 1.0.1
-      cookie: 0.4.2
-      jose: 4.6.0
-      oauth: 0.9.15
-      openid-client: 5.1.4
-      preact: 10.6.6
-      preact-render-to-string: 5.1.20_preact@10.6.6
-      uuid: 8.3.2
-    dev: false
-
   /next-auth/4.2.1_react-dom@17.0.2+react@17.0.2:
     resolution: {integrity: sha512-XDtt7nqevkNf4EJ2zKAKkI+MFsURf11kx11vPwxrBYA1MHeqWwaWbGOUOI2ekNTvfAg4nTEJJUH3LV2cLrH3Tg==}
     engines: {node: ^12.19.0 || ^14.15.0 || ^16.13.0}
@@ -9549,6 +9542,28 @@ packages:
       preact-render-to-string: 5.1.20_preact@10.6.6
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
+      uuid: 8.3.2
+    dev: false
+
+  /next-auth/4.3.1:
+    resolution: {integrity: sha512-DBYEPBLq5naIqh/1i2zEHljcA1OXXecKW3NRU1W4s6R3UX3RdLZ2lWlqgBHUiZQ1zdNikFM/bYQxVGyG7bx8oA==}
+    engines: {node: ^12.19.0 || ^14.15.0 || ^16.13.0}
+    peerDependencies:
+      nodemailer: ^6.6.5
+      react: ^17.0.2 || ^18.0.0-0
+      react-dom: ^17.0.2 || ^18.0.0-0
+    peerDependenciesMeta:
+      nodemailer:
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.17.8
+      '@panva/hkdf': 1.0.1
+      cookie: 0.4.2
+      jose: 4.6.0
+      oauth: 0.9.15
+      openid-client: 5.1.4
+      preact: 10.6.6
+      preact-render-to-string: 5.1.20_preact@10.6.6
       uuid: 8.3.2
     dev: false
 
