@@ -28,18 +28,18 @@
     "test": "jest"
   },
   "dependencies": {
-    "@babel/core": "^7.16.12",
+    "@babel/core": "^7.17.12",
     "@babel/eslint-parser": "^7.17.0",
-    "@babel/plugin-transform-runtime": "^7.16.10",
+    "@babel/plugin-transform-runtime": "^7.17.12",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@changesets/cli": "2.19.0",
     "@manypkg/cli": "0.19.1",
     "@preconstruct/cli": "2.1.5",
-    "babel-jest": "^27.4.6",
+    "babel-jest": "^27.5.1",
     "eslint": "7.32.0",
-    "jest": "^27.4.7",
-    "turbo": "^1.1.5"
+    "jest": "^27.5.1",
+    "turbo": "^1.1.10"
   },
   "preconstruct": {
     "packages": [
@@ -48,7 +48,7 @@
     ]
   },
   "resolutions": {
-    "next": "12.1.0"
+    "next": "12.1.6"
   },
-  "packageManager": "yarn@1.22.17"
+  "packageManager": "yarn@1.22.18"
 }
