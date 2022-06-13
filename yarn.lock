@@ -3058,11 +3058,6 @@
     uid-safe "^2.1.5"
     uuid "^8.3.2"
 
-"@keystone-6/document-renderer@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@keystone-6/document-renderer/-/document-renderer-1.0.0.tgz#afedf84bdfcce8130d6f33daa9e477b08d5bc40c"
-  integrity sha512-mumjqZ+6+m9GhPauJTuRPRZGiZSbYOVJlqBvRmiEcndCuXiTucpyOWmANkIqDQFtPMOy0b13Elpx20mh8eUC6g==
-
 "@keystone-6/document-renderer@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@keystone-6/document-renderer/-/document-renderer-1.1.0.tgz#759f85f6a887109874af9c8638891dce030d970a"
