@@ -3107,17 +3107,6 @@
     slate-history "^0.66.0"
     slate-react "^0.69.0"
 
-"@keystone-ui/button@^6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@keystone-ui/button/-/button-6.0.0.tgz#9b289083bd2b0838f890aef39c7f32600d468ed3"
-  integrity sha512-P9HNHlburwRecalLA5jl3sjrVM21aI3joNu8G+Itu8lk8PddRc3VAyZlfGuksLcJKTI4noA5sR0axvSpj5ThTA==
-  dependencies:
-    "@babel/runtime" "^7.16.3"
-    "@keystone-ui/core" "^4.0.0"
-    "@keystone-ui/icons" "^5.0.0"
-    "@keystone-ui/loading" "^5.0.0"
-    react "^17.0.2"
-
 "@keystone-ui/button@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@keystone-ui/button/-/button-7.0.0.tgz#02b10a8def249607af78a9886c71dc9226ec82cc"
@@ -3194,15 +3183,6 @@
   dependencies:
     "@babel/runtime" "^7.16.3"
     "@keystone-ui/core" "^5.0.0"
-
-"@keystone-ui/loading@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@keystone-ui/loading/-/loading-5.0.0.tgz#8d1d15f9826b7a3642f938d268b83bdf741f5bdd"
-  integrity sha512-oEF1ggDbvrShFqeHDdTyBz0GLra6LRKwDID1FyWYoR2MxI3R6Mtw/bK+7ejKgAYCzGu0bZbcIFiZTF2vWrJYmQ==
-  dependencies:
-    "@babel/runtime" "^7.16.3"
-    "@keystone-ui/core" "^4.0.0"
-    react "^17.0.2"
 
 "@keystone-ui/loading@^6.0.0":
   version "6.0.0"
