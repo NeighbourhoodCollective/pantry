@@ -8059,10 +8059,10 @@ graphql-upload@^13.0.0:
     http-errors "^1.8.1"
     object-path "^0.11.8"
 
-graphql-upload@^15.0.0:
-  version "15.0.0"
-  resolved "https://registry.yarnpkg.com/graphql-upload/-/graphql-upload-15.0.0.tgz#d12afe6a76dbc255aa03023d08e3ccd0a421baa1"
-  integrity sha512-eohUnv84OewfpUISBtv6CK7zaq1z7foxBe8QfosGLJAwCnnK3cLcPkCe8FO6Rh8bqJ+4e09FkVbgwh61zcO4Rg==
+graphql-upload@^15.0.2:
+  version "15.0.2"
+  resolved "https://registry.yarnpkg.com/graphql-upload/-/graphql-upload-15.0.2.tgz#851667589439ee617238e2d90253000a2601ac04"
+  integrity sha512-ufJAkZJBKWRDD/4wJR3VZMy9QWTwqIYIciPtCEF5fCNgWF+V1p7uIgz+bP2YYLiS4OJBhCKR8rnqE/Wg3XPUiw==
   dependencies:
     "@types/busboy" "^1.5.0"
     "@types/node" "*"
