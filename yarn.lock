@@ -7726,6 +7726,11 @@ fs-capacitor@^6.2.0:
   resolved "https://registry.yarnpkg.com/fs-capacitor/-/fs-capacitor-6.2.0.tgz#fa79ac6576629163cb84561995602d8999afb7f5"
   integrity sha512-nKcE1UduoSKX27NSZlg879LdQc94OtbOsEmKMN2MBNudXREvijRKx2GEBsTMTfws+BrbkJoEuynbGSVRSpauvw==
 
+fs-capacitor@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/fs-capacitor/-/fs-capacitor-8.0.0.tgz#a95cbcf58dd50750fe718a03ec051961ef4e61f4"
+  integrity sha512-+Lk6iSKajdGw+7XYxUkwIzreJ2G1JFlYOdnKJv5PzwFLVsoJYBpCuS7WPIUSNT1IbQaEWT1nhYU63Ud03DyzLA==
+
 fs-constants@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs-constants/-/fs-constants-1.0.0.tgz#6be0de9be998ce16af8afc24497b9ee9b7ccd9ad"
@@ -8059,16 +8064,16 @@ graphql-upload@^13.0.0:
     http-errors "^1.8.1"
     object-path "^0.11.8"
 
-graphql-upload@^15.0.0:
-  version "15.0.0"
-  resolved "https://registry.yarnpkg.com/graphql-upload/-/graphql-upload-15.0.0.tgz#d12afe6a76dbc255aa03023d08e3ccd0a421baa1"
-  integrity sha512-eohUnv84OewfpUISBtv6CK7zaq1z7foxBe8QfosGLJAwCnnK3cLcPkCe8FO6Rh8bqJ+4e09FkVbgwh61zcO4Rg==
+graphql-upload@^16.0.0:
+  version "16.0.0"
+  resolved "https://registry.yarnpkg.com/graphql-upload/-/graphql-upload-16.0.0.tgz#c19888aabb8e44d1214b607449396610728b0d6b"
+  integrity sha512-pJOYAcc8Hv9IcZzyQ462LRfVdfiYwqmpHctN2erp5WvdMLo76T+mzvY1RWPqsB3pyBrzQG7iNkt0nQxnlY5Y4w==
   dependencies:
     "@types/busboy" "^1.5.0"
     "@types/node" "*"
     "@types/object-path" "^0.11.1"
     busboy "^1.6.0"
-    fs-capacitor "^6.2.0"
+    fs-capacitor "^8.0.0"
     http-errors "^2.0.0"
     object-path "^0.11.8"
 
