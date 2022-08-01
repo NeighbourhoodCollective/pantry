@@ -10,7 +10,7 @@
     "start": "yarn keystone prisma migrate deploy && yarn keystone start"
   },
   "dependencies": {
-    "@emotion/css": "^11.7.1",
+    "@emotion/css": "^11.10.0",
     "@keystone-6/core": "2.0.0",
     "@keystone-6/fields-document": "3.0.0",
     "@keystone-ui/button": "^7.0.0",
