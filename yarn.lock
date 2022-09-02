@@ -3449,16 +3449,6 @@
     "@keystone-ui/loading" "^6.0.1"
     react "^18.1.0"
 
-"@keystone-ui/core@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@keystone-ui/core/-/core-5.0.0.tgz#9d97f080c1d81f3a0430c770ac921f6771f4513c"
-  integrity sha512-X6gwVdYzZh0T8Ey2bl2HvQDSKmDseLVguMQm1s1AaLkwgnylSCJUzSPiycMpcmv02pEnfNafu0rTWyf8bRRcOg==
-  dependencies:
-    "@babel/runtime" "^7.16.3"
-    "@emotion/react" "^11.7.1"
-    "@types/facepaint" "^1.2.2"
-    facepaint "^1.2.1"
-
 "@keystone-ui/core@^5.0.1":
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@keystone-ui/core/-/core-5.0.1.tgz#cff796451ba3dda3064651fc3bc9d157c61ad001"
@@ -3468,21 +3458,6 @@
     "@emotion/react" "^11.7.1"
     "@types/facepaint" "^1.2.2"
     facepaint "^1.2.1"
-
-"@keystone-ui/fields@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@keystone-ui/fields/-/fields-7.0.0.tgz#c19a8e54f60358a7202c2f76fc078921a4dad124"
-  integrity sha512-Qc1Y19UVAoU5ZpxreRra3AenGwy9REm+OAPYpgX5li0tjsCAlEYxpAj2Q/9uoRHqC8qx4ZVLEAXoOTLk+GHQ+A==
-  dependencies:
-    "@babel/runtime" "^7.16.3"
-    "@keystone-ui/core" "^5.0.0"
-    "@keystone-ui/icons" "^6.0.0"
-    "@keystone-ui/popover" "^6.0.0"
-    date-fns "^2.26.0"
-    react "^18.1.0"
-    react-day-picker "^8.0.4"
-    react-focus-lock "^2.7.1"
-    react-select "^5.2.1"
 
 "@keystone-ui/fields@^7.1.1":
   version "7.1.1"
@@ -3498,14 +3473,6 @@
     react-day-picker "^8.0.4"
     react-focus-lock "^2.7.1"
     react-select "^5.2.1"
-
-"@keystone-ui/icons@^6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@keystone-ui/icons/-/icons-6.0.0.tgz#be81988d62fdb26e4abe6d6dbdab3f61d788ffef"
-  integrity sha512-+ONAsgrT8xl6vXiiDdSrwsbk13yC4/IuGQL0DYwCc8Ko28utA296Ntn7qOELq4MBN7EzIFutv709hlhDQ3Mgjw==
-  dependencies:
-    "@babel/runtime" "^7.16.3"
-    "@keystone-ui/core" "^5.0.0"
 
 "@keystone-ui/icons@^6.0.1":
   version "6.0.1"
@@ -3567,17 +3534,6 @@
     "@babel/runtime" "^7.16.3"
     "@keystone-ui/core" "^5.0.1"
     "@keystone-ui/icons" "^6.0.1"
-
-"@keystone-ui/popover@^6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@keystone-ui/popover/-/popover-6.0.0.tgz#a5e56f857b2b1a07ba33dea588719ad799cb2889"
-  integrity sha512-VaaMiZP8HjD3FXvD/P/v2078ltn8Uid891e0Tc6mSG+Lj0xZZaSl5Hzz6B1OsKajZpwDCTxuOZWC2t/Ki5dgcA==
-  dependencies:
-    "@babel/runtime" "^7.16.3"
-    "@keystone-ui/core" "^5.0.0"
-    "@popperjs/core" "^2.10.2"
-    focus-trap "^6.7.1"
-    react-popper "^2.2.5"
 
 "@keystone-ui/popover@^6.0.1":
   version "6.0.1"
@@ -7774,6 +7730,11 @@ fs-capacitor@^6.2.0:
   resolved "https://registry.yarnpkg.com/fs-capacitor/-/fs-capacitor-6.2.0.tgz#fa79ac6576629163cb84561995602d8999afb7f5"
   integrity sha512-nKcE1UduoSKX27NSZlg879LdQc94OtbOsEmKMN2MBNudXREvijRKx2GEBsTMTfws+BrbkJoEuynbGSVRSpauvw==
 
+fs-capacitor@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/fs-capacitor/-/fs-capacitor-8.0.0.tgz#a95cbcf58dd50750fe718a03ec051961ef4e61f4"
+  integrity sha512-+Lk6iSKajdGw+7XYxUkwIzreJ2G1JFlYOdnKJv5PzwFLVsoJYBpCuS7WPIUSNT1IbQaEWT1nhYU63Ud03DyzLA==
+
 fs-constants@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs-constants/-/fs-constants-1.0.0.tgz#6be0de9be998ce16af8afc24497b9ee9b7ccd9ad"
@@ -8097,19 +8058,6 @@ graphql-type-json@^0.3.2:
   resolved "https://registry.yarnpkg.com/graphql-type-json/-/graphql-type-json-0.3.2.tgz#f53a851dbfe07bd1c8157d24150064baab41e115"
   integrity sha512-J+vjof74oMlCWXSvt0DOf2APEdZOCdubEvGDUAlqH//VBYcOYsGgRW7Xzorr44LvkjiuvecWc8fChxuZZbChtg==
 
-graphql-upload@^15.0.0:
-  version "15.0.0"
-  resolved "https://registry.yarnpkg.com/graphql-upload/-/graphql-upload-15.0.0.tgz#d12afe6a76dbc255aa03023d08e3ccd0a421baa1"
-  integrity sha512-eohUnv84OewfpUISBtv6CK7zaq1z7foxBe8QfosGLJAwCnnK3cLcPkCe8FO6Rh8bqJ+4e09FkVbgwh61zcO4Rg==
-  dependencies:
-    "@types/busboy" "^1.5.0"
-    "@types/node" "*"
-    "@types/object-path" "^0.11.1"
-    busboy "^1.6.0"
-    fs-capacitor "^6.2.0"
-    http-errors "^2.0.0"
-    object-path "^0.11.8"
-
 graphql-upload@^15.0.2:
   version "15.0.2"
   resolved "https://registry.yarnpkg.com/graphql-upload/-/graphql-upload-15.0.2.tgz#851667589439ee617238e2d90253000a2601ac04"
@@ -8120,6 +8068,19 @@ graphql-upload@^15.0.2:
     "@types/object-path" "^0.11.1"
     busboy "^1.6.0"
     fs-capacitor "^6.2.0"
+    http-errors "^2.0.0"
+    object-path "^0.11.8"
+
+graphql-upload@^16.0.2:
+  version "16.0.2"
+  resolved "https://registry.yarnpkg.com/graphql-upload/-/graphql-upload-16.0.2.tgz#1fad65760f0c0806ffb69e52d5a67a9a4f09913f"
+  integrity sha512-enwIkZqUELdNH9lrjHlTNfj7gLitSa0EAX4TNXZtg2frnmQzPhpjH0l+6K7ft274fhoRCIcz8SKiNRJDf/cG4Q==
+  dependencies:
+    "@types/busboy" "^1.5.0"
+    "@types/node" "*"
+    "@types/object-path" "^0.11.1"
+    busboy "^1.6.0"
+    fs-capacitor "^8.0.0"
     http-errors "^2.0.0"
     object-path "^0.11.8"
 
