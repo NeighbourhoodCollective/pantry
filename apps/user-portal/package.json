@@ -78,7 +78,7 @@
     "core-js": "^3.23.1",
     "date-fns": "^2.29.2",
     "deepmerge": "^4.2.2",
-    "downshift": "^6.1.7",
+    "downshift": "^6.1.9",
     "eslint-config-next": "^12.2.5",
     "graphql": "^15.8.0",
     "graphql-tag": "^2.12.6",
