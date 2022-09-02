@@ -3449,16 +3449,6 @@
     "@keystone-ui/loading" "^6.0.1"
     react "^18.1.0"
 
-"@keystone-ui/core@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@keystone-ui/core/-/core-5.0.0.tgz#9d97f080c1d81f3a0430c770ac921f6771f4513c"
-  integrity sha512-X6gwVdYzZh0T8Ey2bl2HvQDSKmDseLVguMQm1s1AaLkwgnylSCJUzSPiycMpcmv02pEnfNafu0rTWyf8bRRcOg==
-  dependencies:
-    "@babel/runtime" "^7.16.3"
-    "@emotion/react" "^11.7.1"
-    "@types/facepaint" "^1.2.2"
-    facepaint "^1.2.1"
-
 "@keystone-ui/core@^5.0.1":
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@keystone-ui/core/-/core-5.0.1.tgz#cff796451ba3dda3064651fc3bc9d157c61ad001"
@@ -3468,21 +3458,6 @@
     "@emotion/react" "^11.7.1"
     "@types/facepaint" "^1.2.2"
     facepaint "^1.2.1"
-
-"@keystone-ui/fields@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@keystone-ui/fields/-/fields-7.0.0.tgz#c19a8e54f60358a7202c2f76fc078921a4dad124"
-  integrity sha512-Qc1Y19UVAoU5ZpxreRra3AenGwy9REm+OAPYpgX5li0tjsCAlEYxpAj2Q/9uoRHqC8qx4ZVLEAXoOTLk+GHQ+A==
-  dependencies:
-    "@babel/runtime" "^7.16.3"
-    "@keystone-ui/core" "^5.0.0"
-    "@keystone-ui/icons" "^6.0.0"
-    "@keystone-ui/popover" "^6.0.0"
-    date-fns "^2.26.0"
-    react "^18.1.0"
-    react-day-picker "^8.0.4"
-    react-focus-lock "^2.7.1"
-    react-select "^5.2.1"
 
 "@keystone-ui/fields@^7.1.1":
   version "7.1.1"
@@ -3498,14 +3473,6 @@
     react-day-picker "^8.0.4"
     react-focus-lock "^2.7.1"
     react-select "^5.2.1"
-
-"@keystone-ui/icons@^6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@keystone-ui/icons/-/icons-6.0.0.tgz#be81988d62fdb26e4abe6d6dbdab3f61d788ffef"
-  integrity sha512-+ONAsgrT8xl6vXiiDdSrwsbk13yC4/IuGQL0DYwCc8Ko28utA296Ntn7qOELq4MBN7EzIFutv709hlhDQ3Mgjw==
-  dependencies:
-    "@babel/runtime" "^7.16.3"
-    "@keystone-ui/core" "^5.0.0"
 
 "@keystone-ui/icons@^6.0.1":
   version "6.0.1"
@@ -3567,17 +3534,6 @@
     "@babel/runtime" "^7.16.3"
     "@keystone-ui/core" "^5.0.1"
     "@keystone-ui/icons" "^6.0.1"
-
-"@keystone-ui/popover@^6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@keystone-ui/popover/-/popover-6.0.0.tgz#a5e56f857b2b1a07ba33dea588719ad799cb2889"
-  integrity sha512-VaaMiZP8HjD3FXvD/P/v2078ltn8Uid891e0Tc6mSG+Lj0xZZaSl5Hzz6B1OsKajZpwDCTxuOZWC2t/Ki5dgcA==
-  dependencies:
-    "@babel/runtime" "^7.16.3"
-    "@keystone-ui/core" "^5.0.0"
-    "@popperjs/core" "^2.10.2"
-    focus-trap "^6.7.1"
-    react-popper "^2.2.5"
 
 "@keystone-ui/popover@^6.0.1":
   version "6.0.1"
@@ -6242,10 +6198,10 @@ core-js-pure@^3.20.2:
   resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.21.1.tgz#8c4d1e78839f5f46208de7230cebfb72bc3bdb51"
   integrity sha512-12VZfFIu+wyVbBebyHmRTuEE/tZrB4tJToWcwAMcsp3h4+sHR+fMJWbKpYiCRWlhFBq+KNyO8rIV9rTkeVmznQ==
 
-core-js@^3.23.1:
-  version "3.23.1"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.23.1.tgz#9f9a9255115f62c512db56d567f636da32ca0b78"
-  integrity sha512-wfMYHWi1WQjpgZNC9kAlN4ut04TM9fUTdi7CqIoTVM7yaiOUQTklOzfb+oWH3r9edQcT3F887swuVmxrV+CC8w==
+core-js@^3.25.0:
+  version "3.25.0"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.25.0.tgz#be71d9e0dd648ffd70c44a7ec2319d039357eceb"
+  integrity sha512-CVU1xvJEfJGhyCpBrzzzU1kjCfgsGUxhEvwUV2e/cOedYWHdmluamx+knDnmhqALddMG16fZvIqvs9aijsHHaA==
 
 core-util-is@~1.0.0:
   version "1.0.3"
