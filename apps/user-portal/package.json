@@ -75,7 +75,7 @@
     "@stripe/react-stripe-js": "^1.10.0",
     "@stripe/stripe-js": "^1.35.0",
     "apollo-upload-client": "^17.0.0",
-    "core-js": "^3.23.1",
+    "core-js": "^3.25.0",
     "date-fns": "^2.29.2",
     "deepmerge": "^4.2.2",
     "downshift": "^6.1.9",
