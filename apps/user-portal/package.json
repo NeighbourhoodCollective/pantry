@@ -8,7 +8,7 @@
   "author": "",
   "main": "index.js",
   "scripts": {
-    "build": "next build",
+    "build": "ts-gql build && next build",
     "dev": "next -p 7777",
     "postinstall": "ts-gql build",
     "start": "node server.js",
