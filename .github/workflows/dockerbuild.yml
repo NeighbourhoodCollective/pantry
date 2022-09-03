@@ -7,13 +7,13 @@ on:
         required: true
         type: string
     secrets:
-      AzureAppService_ContainerUsername_28d39508e5734f558fc68a409d6d0fac:
+      acrContainerUsername:
         required: true
-      AzureAppService_ContainerPassword_807a7babf8fc4bbab3814a0bd2d77375:
+      acrContainerPassword:
         required: true
 
 jobs:
-  build_job:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,19 +26,19 @@ jobs:
         uses: docker/login-action@v2
         with:
           registry: https://collectivereg.azurecr.io/
-          username: ${{ secrets.AzureAppService_ContainerUsername_28d39508e5734f558fc68a409d6d0fac }}
-          password: ${{ secrets.AzureAppService_ContainerPassword_807a7babf8fc4bbab3814a0bd2d77375 }}
+          username: ${{ secrets.acrContainerUsername }}
+          password: ${{ secrets.acrContainerPassword }}
 
       - name: Build and push backend container image to registry
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: collectivereg.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_28d39508e5734f558fc68a409d6d0fac }}/pantry-backend-${{ inputs.environment }}:${{ github.sha }}
+          tags: collectivereg.azurecr.io/${{ secrets.acrContainerUsername }}/pantry-backend-${{ inputs.environment }}:${{ github.sha }}
           file: ./backend/Dockerfile
 
       - name: Build and push frontend container image to registry
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: collectivereg.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_28d39508e5734f558fc68a409d6d0fac }}/pantry-frontend-${{ inputs.environment }}:${{ github.sha }}
+          tags: collectivereg.azurecr.io/${{ secrets.acrContainerUsername }}/pantry-frontend-${{ inputs.environment }}:${{ github.sha }}
           file: ./apps/Dockerfile

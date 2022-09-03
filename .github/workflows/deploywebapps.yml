@@ -1,0 +1,42 @@
+name: Deploy Docker image to WepApps
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+    secrets:
+      acrContainerUsername:
+        required: true
+      backendPublishProfile:
+        required: true
+      frontendPublishProfile:
+        required: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: ${{ inputs.environment }}
+      url: ${{ steps.frontend-to-webapp.outputs.webapp-url }}
+
+    steps:
+      - name: Deploy Backend to Azure Web App
+        id: backend-to-webapp
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: "pantrybackend-${{ inputs.environment }}"
+          slot-name: "production"
+          publish-profile: ${{ secrets.backendPublishProfile }}
+          images: "collectivereg.azurecr.io/${{ secrets.acrContainerUsername }}/pantry-backend-${{ inputs.environment }}:${{ github.sha }}"
+
+      - name: Deploy Frontend to Azure Web App
+        id: frontend-to-webapp
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: "pantryfrontend-${{ inputs.environment }}"
+          slot-name: "production"
+          publish-profile: ${{ secrets.frontendPublishProfile }}
+          images: "collectivereg.azurecr.io/${{ secrets.acrContainerUsername }}/pantry-frontend-${{ inputs.environment }}:${{ github.sha }}"

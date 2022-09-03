@@ -17,30 +17,15 @@ jobs:
     uses: ./.github/workflows/dockerbuild.yml
     with:
       environment: dev
-    secrets: inherit
+    secrets:
+      acrContainerUsername: ${{ secrets.AzureAppService_ContainerUsername_28d39508e5734f558fc68a409d6d0fac }}
+      acrContainerPassword: ${{ secrets.AzureAppService_ContainerPassword_807a7babf8fc4bbab3814a0bd2d77375 }}
 
   deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    environment:
-      name: "Test"
-      url: ${{ steps.frontend-to-webapp.outputs.webapp-url }}
-
-    steps:
-      - name: Deploy Backend to Azure Web App
-        id: backend-to-webapp
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: "pantrybackend-dev"
-          slot-name: "production"
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_b238d802ac8645e6b65a5edde468d12d }}
-          images: "collectivereg.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_28d39508e5734f558fc68a409d6d0fac }}/pantry-backend-dev:${{ github.sha }}"
-
-      - name: Deploy Frontend to Azure Web App
-        id: frontend-to-webapp
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: "pantryfrontend-dev"
-          slot-name: "production"
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_3d252031ecc64559a923899a336cd451 }}
-          images: "collectivereg.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_e63bb1905c6a4a45b5a231dfb2e20209 }}/pantry-frontend-dev:${{ github.sha }}"
+    uses: ./.github/workflows/deploywebapps.yml
+    with:
+      environment: dev
+    secrets:
+      backendPublishProfile: ${{ secrets.AzureAppService_PublishProfile_b238d802ac8645e6b65a5edde468d12d }}
+      frontnedPublishProfile: ${{ secrets.AzureAppService_PublishProfile_3d252031ecc64559a923899a336cd451 }}
+      acrContainerUsername: ${{ secrete.AzureAppService_ContainerUsername_28d39508e5734f558fc68a409d6d0fac }}
