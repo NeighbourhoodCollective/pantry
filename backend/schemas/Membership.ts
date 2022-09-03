@@ -10,8 +10,9 @@ import { rules, isSignedIn, permissions } from '../access';
 import getContactName from '../lib/getContactName';
 import sendEmail from '../lib/sendEmail';
 import { preferenceFields } from './preferenceFields';
+import { Lists } from '.keystone/types';
 
-export const Membership = list({
+export const Membership: Lists.Membership = list({
   access: {
     operation: {
       create: () => true,

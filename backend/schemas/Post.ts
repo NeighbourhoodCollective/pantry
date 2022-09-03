@@ -1,21 +1,22 @@
-import { list } from "@keystone-6/core";
-import { text, relationship, select, timestamp } from "@keystone-6/core/fields";
-import { document } from "@keystone-6/fields-document";
+import { list } from '@keystone-6/core';
+import { text, relationship, select, timestamp } from '@keystone-6/core/fields';
+import { document } from '@keystone-6/fields-document';
+import { Lists } from '.keystone/types';
 
-export const Post = list({
+export const Post: Lists.Post = list({
   fields: {
     title: text(),
     club: relationship({
-      ref: "Club.posts",
+      ref: 'Club.posts',
       many: false,
     }),
     status: select({
       options: [
-        { label: "Published", value: "published" },
-        { label: "Draft", value: "draft" },
+        { label: 'Published', value: 'published' },
+        { label: 'Draft', value: 'draft' },
       ],
       ui: {
-        displayMode: "segmented-control",
+        displayMode: 'segmented-control',
       },
     }),
     content: document({
@@ -32,24 +33,24 @@ export const Post = list({
     }),
     publishDate: timestamp(),
     author: relationship({
-      ref: "User.posts",
+      ref: 'User.posts',
       ui: {
-        displayMode: "cards",
-        cardFields: ["name", "email"],
-        inlineEdit: { fields: ["name", "email"] },
+        displayMode: 'cards',
+        cardFields: ['name', 'email'],
+        inlineEdit: { fields: ['name', 'email'] },
         linkToItem: true,
-        inlineCreate: { fields: ["name", "email"] },
+        inlineCreate: { fields: ['name', 'email'] },
       },
     }),
     tags: relationship({
-      ref: "Tag.posts",
+      ref: 'Tag.posts',
       ui: {
-        displayMode: "cards",
-        cardFields: ["name"],
-        inlineEdit: { fields: ["name"] },
+        displayMode: 'cards',
+        cardFields: ['name'],
+        inlineEdit: { fields: ['name'] },
         linkToItem: true,
         inlineConnect: true,
-        inlineCreate: { fields: ["name"] },
+        inlineCreate: { fields: ['name'] },
       },
       many: true,
     }),

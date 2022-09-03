@@ -1,29 +1,30 @@
-import { list } from "@keystone-6/core";
-import { text, relationship, select } from "@keystone-6/core/fields";
-import { document } from "@keystone-6/fields-document";
+import { list } from '@keystone-6/core';
+import { text, relationship, select } from '@keystone-6/core/fields';
+import { document } from '@keystone-6/fields-document';
+import { Lists } from '.keystone/types';
 
-export const Club = list({
+export const Club: Lists.Club = list({
   fields: {
     name: text(),
     subscriptions: relationship({
-      ref: "Subscription.club",
+      ref: 'Subscription.club',
       many: true,
     }),
     posts: relationship({
-      ref: "Post.club",
+      ref: 'Post.club',
       many: true,
     }),
     status: select({
       options: [
-        { label: "Published", value: "published" },
-        { label: "Draft", value: "draft" },
+        { label: 'Published', value: 'published' },
+        { label: 'Draft', value: 'draft' },
       ],
       ui: {
-        displayMode: "segmented-control",
+        displayMode: 'segmented-control',
       },
     }),
     slug: text({
-      isIndexed: "unique",
+      isIndexed: 'unique',
       validation: { isRequired: true },
       isFilterable: true,
     }),

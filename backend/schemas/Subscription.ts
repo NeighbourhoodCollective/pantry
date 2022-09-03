@@ -3,8 +3,9 @@ import { list } from '@keystone-6/core';
 import { rules, isSignedIn, permissions } from '../access';
 import { document } from '@keystone-6/fields-document';
 import stripeConfig from '../lib/stripe';
+import { Lists } from '.keystone/types';
 
-export const Subscription = list({
+export const Subscription: Lists.Subscription = list({
   access: {
     operation: {
       create: permissions.canManageProducts,

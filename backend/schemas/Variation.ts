@@ -11,14 +11,15 @@ import { list } from '@keystone-6/core';
 import { rules, isSignedIn, permissions } from '../access';
 import { document } from '@keystone-6/fields-document';
 import stripeConfig from '../lib/stripe';
+import { Lists } from '.keystone/types';
 
-export const Variation = list({
+export const Variation: Lists.Variation = list({
   hooks: {
-    afterOperation: async ({ listKey, operation, resolvedData, context }) => {
+    afterOperation: async ({ item, operation, context }) => {
       // Update Stripe Price if the variation is being updated
       if (operation === 'update') {
         const variation = await context.query.Variation.findOne({
-          where: { id: listKey },
+          where: { id: item.id },
           query: `
                             id
                             stripePriceId
@@ -42,7 +43,7 @@ export const Variation = list({
                 stripeProductId`,
         });
         const active =
-          resolvedData.status === 'active' || item?.active === 'active'
+          resolvedData.status === 'active' || item?.status === 'active'
             ? true
             : false;
         const stripeProductId = subscription.stripeProductId;

@@ -3,8 +3,9 @@ import { text, relationship, json, checkbox } from '@keystone-6/core/fields';
 import stripeConfig from '../lib/stripe';
 
 import { rules, isSignedIn, permissions } from '../access';
+import { Lists } from '.keystone/types';
 
-export const User = list({
+export const User: Lists.User = list({
   hooks: {
     resolveInput: async ({ resolvedData, item }) => {
       if (!resolvedData.stripeCustomerId && !item?.stripeCustomerId) {
