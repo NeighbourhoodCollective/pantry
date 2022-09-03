@@ -33,7 +33,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: collectivereg.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_28d39508e5734f558fc68a409d6d0fac }}/pantry-backend-{{ inputs.environment }}:${{ github.sha }}
+          tags: collectivereg.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_28d39508e5734f558fc68a409d6d0fac }}/pantry-backend-${{ inputs.environment }}:${{ github.sha }}
           file: ./backend/Dockerfile
 
       - name: Build and push frontend container image to registry
