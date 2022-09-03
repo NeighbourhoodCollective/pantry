@@ -28,4 +28,4 @@ jobs:
     secrets:
       backendPublishProfile: ${{ secrets.AzureAppService_PublishProfile_b238d802ac8645e6b65a5edde468d12d }}
       frontnedPublishProfile: ${{ secrets.AzureAppService_PublishProfile_3d252031ecc64559a923899a336cd451 }}
-      acrContainerUsername: ${{ secrete.AzureAppService_ContainerUsername_28d39508e5734f558fc68a409d6d0fac }}
+      acrContainerUsername: ${{ secrets.AzureAppService_ContainerUsername_28d39508e5734f558fc68a409d6d0fac }}
