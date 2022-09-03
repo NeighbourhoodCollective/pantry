@@ -14,15 +14,10 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    uses: ./.github/workflows/dockerbuild.yml
+    with:
+      environment: dev
 
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Run Docker Build and Push
-        uses: ./.github/workflows/dockerbuild.yml@dev
-        with:
-          environment: dev
 
   deploy:
     runs-on: ubuntu-latest
