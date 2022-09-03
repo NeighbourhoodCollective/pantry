@@ -22,6 +22,7 @@ jobs:
       acrContainerPassword: ${{ secrets.AzureAppService_ContainerPassword_807a7babf8fc4bbab3814a0bd2d77375 }}
 
   deploy:
+    needs: build
     uses: ./.github/workflows/deploywebapps.yml
     with:
       environment: dev
