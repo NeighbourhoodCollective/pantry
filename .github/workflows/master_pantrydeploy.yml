@@ -1,6 +1,3 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
 name: Build and deploy Node.js app to Azure Web App - pantryadmin
 
 on:
@@ -31,6 +28,8 @@ jobs:
       environment: prod
       frontendContainerName: pantry-frontend
       backendContainerName: pantry-backend
+      frontendAppName: pantryfrontend
+      backendAppName: pantryadmin-docker
     secrets:
       backendPublishProfile: ${{ secrets.AzureAppService_PublishProfile_d7e475cd12ae435193e3f0efff1d8394 }}
       frontendPublishProfile: ${{ secrets.AzureAppService_PublishProfile_4d2ccba4715b4bfe9af97028f357c793 }}

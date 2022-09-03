@@ -39,12 +39,12 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: collectivereg.azurecr.io/${{ secrets.acrContainerUsername }}/${{ backendContainerName }}:${{ github.sha }}
+          tags: collectivereg.azurecr.io/${{ secrets.acrContainerUsername }}/${{ inputs.backendContainerName }}:${{ github.sha }}
           file: ./backend/Dockerfile
 
       - name: Build and push frontend container image to registry
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: collectivereg.azurecr.io/${{ secrets.acrContainerUsername }}/${{ frontendContainerName }}:${{ github.sha }}
+          tags: collectivereg.azurecr.io/${{ secrets.acrContainerUsername }}/${{ inputs.frontendContainerName }}:${{ github.sha }}
           file: ./apps/Dockerfile

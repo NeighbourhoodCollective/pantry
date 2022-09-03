@@ -12,6 +12,12 @@ on:
       backendContainerName:
         required: true
         type: string
+      frontendAppName:
+        required: true
+        type: string
+      backendAppName:
+        required: true
+        type: string
     secrets:
       acrContainerUsername:
         required: true
@@ -32,16 +38,16 @@ jobs:
         id: backend-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: "pantrybackend-${{ inputs.environment }}"
+          app-name: ${{ inputs.backendAppName }}
           slot-name: "production"
           publish-profile: ${{ secrets.backendPublishProfile }}
-          images: "collectivereg.azurecr.io/${{ secrets.acrContainerUsername }}/${{ backendContainerName }}:${{ github.sha }}"
+          images: "collectivereg.azurecr.io/${{ secrets.acrContainerUsername }}/${{ inputs.backendContainerName }}:${{ github.sha }}"
 
       - name: Deploy Frontend to Azure Web App
         id: frontend-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: "pantryfrontend-${{ inputs.environment }}"
+          app-name: "${{ inputs.frontendAppName }}"
           slot-name: "production"
           publish-profile: ${{ secrets.frontendPublishProfile }}
-          images: "collectivereg.azurecr.io/${{ secrets.acrContainerUsername }}/${{ frontendContainerName }}:${{ github.sha }}"
+          images: "collectivereg.azurecr.io/${{ secrets.acrContainerUsername }}/${{ inputs.frontendContainerName }}:${{ github.sha }}"
