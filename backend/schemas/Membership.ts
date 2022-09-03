@@ -1,5 +1,4 @@
 import {
-  integer,
   select,
   text,
   relationship,

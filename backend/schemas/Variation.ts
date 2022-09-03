@@ -5,17 +5,18 @@ import {
   checkbox,
   relationship,
   timestamp,
-} from "@keystone-6/core/fields";
-import { list } from "@keystone-6/core";
-import { rules, isSignedIn, permissions } from "../access";
-import { document } from "@keystone-6/fields-document";
-import stripeConfig from "../lib/stripe";
+  decimal,
+} from '@keystone-6/core/fields';
+import { list } from '@keystone-6/core';
+import { rules, isSignedIn, permissions } from '../access';
+import { document } from '@keystone-6/fields-document';
+import stripeConfig from '../lib/stripe';
 
 export const Variation = list({
   hooks: {
     afterOperation: async ({ listKey, operation, resolvedData, context }) => {
       // Update Stripe Price if the variation is being updated
-      if (operation === "update") {
+      if (operation === 'update') {
         const variation = await context.query.Variation.findOne({
           where: { id: listKey },
           query: `
@@ -25,9 +26,8 @@ export const Variation = list({
                             `,
         });
         const active = variation.status === 'active' ? true : false;
-        await stripeConfig.prices.update(
-          variation.stripePriceId, {
-          active
+        await stripeConfig.prices.update(variation.stripePriceId, {
+          active,
         });
       }
     },
@@ -41,29 +41,39 @@ export const Variation = list({
                 id
                 stripeProductId`,
         });
-        const active = resolvedData.status === 'active' || item?.active === 'active' ? true : false;
+        const active =
+          resolvedData.status === 'active' || item?.active === 'active'
+            ? true
+            : false;
         const stripeProductId = subscription.stripeProductId;
         const unitPriceDollars = resolvedData.price || item?.price;
         const unitPriceCents = unitPriceDollars * 100;
         const price = await stripeConfig.prices.create({
           product: stripeProductId,
           active: active,
-          currency: "aud",
+          currency: 'aud',
           unit_amount: unitPriceCents,
           recurring: {
             interval: resolvedData.chargeInterval || item?.chargeInterval,
             interval_count:
               resolvedData.chargeIntervalCount || item?.chargeIntervalCount,
-            usage_type: "licensed",
+            usage_type: 'licensed',
           },
         });
         resolvedData.stripePriceId = price.id;
       }
       return resolvedData;
     },
-    validateInput: async ({ resolvedData, addValidationError, context, item }) => {
+    validateInput: async ({
+      resolvedData,
+      addValidationError,
+      context,
+      item,
+    }) => {
       const subscription = await context.query.Subscription.findOne({
-        where: { id: resolvedData.subscription?.connect?.id || item?.subscriptionId},
+        where: {
+          id: resolvedData.subscription?.connect?.id || item?.subscriptionId,
+        },
         query: `
               id
               stripeProductId`,
@@ -71,7 +81,7 @@ export const Variation = list({
       if (!subscription || !subscription.stripeProductId) {
         // We call addValidationError to indicate an invalid value.
         addValidationError(
-          "You need to connect a subscription to a variation that subscription must have a Stripe product ID"
+          'You need to connect a subscription to a variation that subscription must have a Stripe product ID'
         );
       }
     },
@@ -84,33 +94,36 @@ export const Variation = list({
     },
     filter: {
       update: rules.canManageSubscriptions,
-      query: rules.canReadProducts
+      query: rules.canReadProducts,
     },
   },
   fields: {
     name: text({ validation: { isRequired: true } }),
     subscription: relationship({
-      ref: "Subscription.variations",
+      ref: 'Subscription.variations',
       many: false,
     }),
     status: select({
       options: [
-        { value: "active", label: "Active"},
-        { value: "inactive", label: "Inactive"} ],
-      defaultValue: "active",
+        { value: 'active', label: 'Active' },
+        { value: 'inactive', label: 'Inactive' },
+      ],
+      defaultValue: 'active',
     }),
     memberships: relationship({
-      ref: "Membership.variation",
+      ref: 'Membership.variation',
       many: true,
     }),
-    price: integer({
+    price: decimal({
       access: {
         update: () => false,
       },
+      scale: 2,
+      precision: 4,
       validation: {
         isRequired: true,
       },
-    }),    
+    }),
     about: document({
       formatting: true,
       layouts: [
@@ -128,10 +141,10 @@ export const Variation = list({
         update: () => false,
       },
       options: [
-        { value: "day", label: "Day" },
-        { value: "week", label: "Week" },
-        { value: "month", label: "Month" },
-        { value: "year", label: "Year" },
+        { value: 'day', label: 'Day' },
+        { value: 'week', label: 'Week' },
+        { value: 'month', label: 'Month' },
+        { value: 'year', label: 'Year' },
       ],
       validation: {
         isRequired: true,
@@ -150,7 +163,7 @@ export const Variation = list({
       access: {
         update: () => false,
       },
-      isIndexed: "unique",
+      isIndexed: 'unique',
     }),
   },
 });

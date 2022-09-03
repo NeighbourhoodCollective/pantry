@@ -1,15 +1,8 @@
-import {
-  integer,
-  select,
-  text,
-  checkbox,
-  relationship,
-  timestamp,
-} from "@keystone-6/core/fields";
-import { list } from "@keystone-6/core";
-import { rules, isSignedIn, permissions } from "../access";
-import { document } from "@keystone-6/fields-document";
-import stripeConfig from "../lib/stripe";
+import { select, text, checkbox, relationship } from '@keystone-6/core/fields';
+import { list } from '@keystone-6/core';
+import { rules, isSignedIn, permissions } from '../access';
+import { document } from '@keystone-6/fields-document';
+import stripeConfig from '../lib/stripe';
 
 export const Subscription = list({
   access: {
@@ -20,7 +13,7 @@ export const Subscription = list({
     },
     filter: {
       update: rules.canManageSubscriptions,
-      query: rules.canReadProducts
+      query: rules.canReadProducts,
     },
   },
   hooks: {
@@ -36,7 +29,7 @@ export const Subscription = list({
     },
     afterOperation: async ({ listKey, operation, resolvedData, context }) => {
       // Update Stripe Product if the subscription is being updated
-      if (operation === "update") {
+      if (operation === 'update') {
         const subscription = await context.query.Subscription.findOne({
           where: { id: listKey },
           query: `
@@ -45,11 +38,9 @@ export const Subscription = list({
                             name
                             `,
         });
-        await stripeConfig.products.update(
-          subscription.stripeProductId, {
+        await stripeConfig.products.update(subscription.stripeProductId, {
           name: subscription.name,
-          }
-        );
+        });
       }
     },
   },
@@ -57,11 +48,11 @@ export const Subscription = list({
     name: text({ validation: { isRequired: true } }),
     description: text({ validation: { isRequired: true } }),
     club: relationship({
-      ref: "Club.subscriptions",
+      ref: 'Club.subscriptions',
       many: false,
     }),
     variations: relationship({
-      ref: "Variation.subscription",
+      ref: 'Variation.subscription',
       many: true,
     }),
     fromEmail: text({
@@ -75,7 +66,7 @@ export const Subscription = list({
       },
     }),
     slug: text({
-      isIndexed: "unique",
+      isIndexed: 'unique',
       validation: { isRequired: true },
       isFilterable: true,
     }),
@@ -93,14 +84,14 @@ export const Subscription = list({
       dividers: true,
     }),
     stripeProductId: text({
-      isIndexed: "unique",
+      isIndexed: 'unique',
     }),
     status: select({
       options: [
-        { value: "active", label: "Active" },
-        { value: "inactive", label: "Inactive" },
+        { value: 'active', label: 'Active' },
+        { value: 'inactive', label: 'Inactive' },
       ],
-      defaultValue: "active",
+      defaultValue: 'active',
     }),
   },
 });

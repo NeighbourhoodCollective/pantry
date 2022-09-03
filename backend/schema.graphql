@@ -323,13 +323,15 @@ type Variation {
     skip: Int! = 0
   ): [Membership!]
   membershipsCount(where: MembershipWhereInput! = {}): Int
-  price: Int
+  price: Decimal
   about: Variation_about_Document
   chargeInterval: String
   chargeIntervalCount: Int
   totalCount: Int
   stripePriceId: String
 }
+
+scalar Decimal
 
 type Variation_about_Document {
   document(hydrateRelationships: Boolean! = false): JSON!
@@ -349,7 +351,7 @@ input VariationWhereInput {
   subscription: SubscriptionWhereInput
   status: StringNullableFilter
   memberships: MembershipManyRelationFilter
-  price: IntFilter
+  price: DecimalFilter
   chargeInterval: StringFilter
   chargeIntervalCount: IntFilter
   totalCount: IntNullableFilter
@@ -360,6 +362,17 @@ input MembershipManyRelationFilter {
   every: MembershipWhereInput
   some: MembershipWhereInput
   none: MembershipWhereInput
+}
+
+input DecimalFilter {
+  equals: Decimal
+  in: [Decimal!]
+  notIn: [Decimal!]
+  lt: Decimal
+  lte: Decimal
+  gt: Decimal
+  gte: Decimal
+  not: DecimalFilter
 }
 
 input IntFilter {
@@ -400,7 +413,7 @@ input VariationUpdateInput {
   subscription: SubscriptionRelateToOneForUpdateInput
   status: String
   memberships: MembershipRelateToManyForUpdateInput
-  price: Int
+  price: Decimal
   about: JSON
   chargeInterval: String
   chargeIntervalCount: Int
@@ -431,7 +444,7 @@ input VariationCreateInput {
   subscription: SubscriptionRelateToOneForCreateInput
   status: String
   memberships: MembershipRelateToManyForCreateInput
-  price: Int
+  price: Decimal
   about: JSON
   chargeInterval: String
   chargeIntervalCount: Int

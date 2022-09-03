@@ -48,7 +48,7 @@ model Variation {
   subscriptionId      String?       @map("subscription")
   status              String?       @default("active")
   memberships         Membership[]  @relation("Membership_variation")
-  price               Int
+  price               Decimal       @postgresql.Decimal(4, 2)
   about               Json          @default("[{\"type\":\"paragraph\",\"children\":[{\"text\":\"\"}]}]")
   chargeInterval      String
   chargeIntervalCount Int
