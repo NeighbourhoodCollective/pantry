@@ -11,6 +11,7 @@ FROM node:16-alpine AS installer
 RUN apk update
 WORKDIR /app
 COPY --from=builder /app/out/json/ .
+COPY ./backend/schema.graphql ./backend/schema.graphql
 COPY --from=builder /app/out/yarn.lock ./yarn.lock
 RUN yarn install
 
@@ -19,6 +20,7 @@ RUN apk update
 WORKDIR /app
 COPY --from=installer /app/ .
 COPY --from=builder /app/out/full/ .
+COPY ./backend/schema.graphql ./backend/schema.graphql
 COPY .gitignore .gitignore
 ENV NODE_ENV=production
 ENV BACKEND_BASE_URL=http://localhost:3000

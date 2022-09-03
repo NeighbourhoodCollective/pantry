@@ -3,7 +3,7 @@ import getConfig from 'next/config';
 import { useMutation } from '@apollo/client';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/dist/client/router';
-import gql from 'graphql-tag';
+import { gql } from '@ts-gql/tag/no-transform';
 import { SigninButton } from './SigninButton';
 import { User } from '../types';
 
@@ -16,7 +16,7 @@ export function SubscribeButton({ ...props }) {
     mutation SUBSCRIPTION_MUTATION($variationId: ID!, $returnUrl: String!) {
       membershipSignup(returnUrl: $returnUrl, variationId: $variationId)
     }
-  `;
+  ` as import('../__generated__/ts-gql/SUBSCRIPTION_MUTATION').type;
 
   const userSession = userData?.data as User;
   const [getStripeSession] = useMutation(SUBSCRIPTION_MUTATION, {
@@ -61,7 +61,7 @@ export function SubscribeButton({ ...props }) {
             returnUrl: `${window.location.origin}/${club}/${subscription}`,
           },
         });
-        router.push(session.data.membershipSignup.url);
+        router.push(session?.data?.membershipSignup.url);
       }}
     >
       Subscribe

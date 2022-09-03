@@ -1,4 +1,7 @@
 {
-  "plugins": ["prettier"],
-  "parser": "@babel/eslint-parser"
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@ts-gql", "prettier"],
+  "rules": {
+    "@ts-gql/ts-gql": "error"
+  }
 }

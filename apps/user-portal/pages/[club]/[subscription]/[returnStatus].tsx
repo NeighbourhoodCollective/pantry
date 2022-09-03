@@ -1,32 +1,15 @@
 import { useRouter } from 'next/dist/client/router';
-import { signIn, signOut, useSession } from 'next-auth/react';
 import { Container, Row, Button } from 'react-bootstrap';
 import { useQuery, useMutation } from '@apollo/client';
-import gql from 'graphql-tag';
+import { gql } from '@ts-gql/tag/no-transform';
 
-const SINGLE_ITEM_QUERY = gql`
-  query SINGLE_ITEM_QUERY($slug: String!) {
-    subscription(where: { slug: $slug }) {
-      name
-      slug
-      about {
-        document
-      }
-      id
-      club {
-        id
-        name
-      }
-    }
-  }
-`;
 const DELETE_ITEM_MUTATION = gql`
   mutation DELETE_ITEM_MUTATION($id: ID!) {
-    deleteSubscription(id: $id) {
+    deleteSubscription(where: { id: $id }) {
       id
     }
   }
-`;
+` as import('../../../__generated__/ts-gql/DELETE_ITEM_MUTATION').type;
 
 const GET_MEMBERSHIP_QUERY = gql`
   query GET_MEMBERSHIP_QUERY($session_id: String!) {
@@ -44,48 +27,40 @@ const GET_MEMBERSHIP_QUERY = gql`
       }
     }
   }
-`;
+` as import('../../../__generated__/ts-gql/GET_MEMBERSHIP_QUERY').type;
 
 export default function SubscriptionPage() {
   const router = useRouter();
   // TODO: fix the thing that breaks membership when a user clicks back
-  const { data: userData, status } = useSession();
 
   // eslint-disable-next-line camelcase
   const { subscription, club, returnStatus, session_id } = router.query;
-  console.log(subscription, club, returnStatus);
+  if (!subscription || typeof subscription !== 'string')
+    throw new Error('No subscription');
 
-  const { loading, error, data } = useQuery(SINGLE_ITEM_QUERY, {
-    variables: {
-      slug: subscription,
-    },
-  });
-  const {
-    loading: memLoad,
-    error: memError,
-    data: memData,
-  } = useQuery(GET_MEMBERSHIP_QUERY, {
+  // eslint-disable-next-line camelcase
+  if (!session_id || typeof session_id !== 'string')
+    throw new Error('No session_id');
+  const { loading, error, data } = useQuery(GET_MEMBERSHIP_QUERY, {
     variables: {
       session_id,
     },
   });
   const [deleteItem] = useMutation(DELETE_ITEM_MUTATION);
 
-  if (loading || memLoad) return <p>Loading...</p>;
-  if (error || memError) return <p>Error: {error?.message}</p>;
-  if (!data.subscription)
-    return <p>No subscription found for {subscription}</p>;
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error?.message}</p>;
 
   if (returnStatus === 'success') {
     return (
       <Container>
-        {memData &&
+        {data && (
           <Row>
             <h2>Thanks for becoming a member</h2>
-            <p> Variation - {memData.membership.variation.name}</p>
-            <p> Status - {memData.membership.status}</p>
+            <p> Variation - {data?.membership?.variation?.name}</p>
+            <p> Status - {data?.membership?.status}</p>
           </Row>
-        }
+        )}
         <br />
         <Button
           variant="primary"
@@ -110,9 +85,10 @@ export default function SubscriptionPage() {
         type="button"
         onClick={() => {
           // delete the membership
+          if (!data?.membership?.id) throw new Error('No membership id');
           deleteItem({
             variables: {
-              id: memData.membership.id,
+              id: data?.membership?.id,
             },
           });
           router.push(`/${club}`);

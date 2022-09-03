@@ -26,5 +26,6 @@ module.exports = {
       "corejs": 3
     },
   ],
+  "@ts-gql/babel-plugin",
   ]
 };
