@@ -6,6 +6,12 @@ on:
       environment:
         required: true
         type: string
+      frontendContainerName:
+        required: true
+        type: string
+      backendContainerName:
+        required: true
+        type: string
     secrets:
       acrContainerUsername:
         required: true
@@ -33,12 +39,12 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: collectivereg.azurecr.io/${{ secrets.acrContainerUsername }}/pantry-backend-${{ inputs.environment }}:${{ github.sha }}
+          tags: collectivereg.azurecr.io/${{ secrets.acrContainerUsername }}/${{ backendContainerName }}:${{ github.sha }}
           file: ./backend/Dockerfile
 
       - name: Build and push frontend container image to registry
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: collectivereg.azurecr.io/${{ secrets.acrContainerUsername }}/pantry-frontend-${{ inputs.environment }}:${{ github.sha }}
+          tags: collectivereg.azurecr.io/${{ secrets.acrContainerUsername }}/${{ frontendContainerName }}:${{ github.sha }}
           file: ./apps/Dockerfile

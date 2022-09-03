@@ -16,7 +16,9 @@ jobs:
   build:
     uses: ./.github/workflows/dockerbuild.yml
     with:
-      environment: dev
+      environment: Test
+      frontendContainerName: pantry-frontend-dev
+      backendContainerName: pantry-backend-dev
     secrets:
       acrContainerUsername: ${{ secrets.AzureAppService_ContainerUsername_28d39508e5734f558fc68a409d6d0fac }}
       acrContainerPassword: ${{ secrets.AzureAppService_ContainerPassword_807a7babf8fc4bbab3814a0bd2d77375 }}
@@ -25,7 +27,9 @@ jobs:
     needs: build
     uses: ./.github/workflows/deploywebapps.yml
     with:
-      environment: dev
+      environment: Test
+      frontendContainerName: pantry-frontend-dev
+      backendContainerName: pantry-backend-dev
     secrets:
       backendPublishProfile: ${{ secrets.AzureAppService_PublishProfile_b238d802ac8645e6b65a5edde468d12d }}
       frontendPublishProfile: ${{ secrets.AzureAppService_PublishProfile_3d252031ecc64559a923899a336cd451 }}
