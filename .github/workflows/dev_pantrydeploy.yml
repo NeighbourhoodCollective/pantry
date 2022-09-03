@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Run Docker Build and Push
-        uses: ./.github/workflows/dockerbuild.yml
+        uses: ./.github/workflows/dockerbuild.yml@dev
         with:
           environment: dev
 
