@@ -17,7 +17,7 @@ jobs:
     uses: ./.github/workflows/dockerbuild.yml
     with:
       environment: dev
-
+    secrets: inherit
 
   deploy:
     runs-on: ubuntu-latest
