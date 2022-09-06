@@ -4194,10 +4194,10 @@
     lazy-require.macro "^0.1.0"
     superstruct "^0.10.12"
 
-"@ts-gql/eslint-plugin@^0.8.3":
-  version "0.8.3"
-  resolved "https://registry.yarnpkg.com/@ts-gql/eslint-plugin/-/eslint-plugin-0.8.3.tgz#31b70122c94eae556c75f07481580aa994fcb606"
-  integrity sha512-Sohn/eMg+FE6eVfGnXrkE6kJ12dPVutWomN1rhfrij0+XSiQ1DoF6nKq0jsQEoq9vI0VgVCM9fGYoMct6EPnyA==
+"@ts-gql/eslint-plugin@^0.8.4":
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/@ts-gql/eslint-plugin/-/eslint-plugin-0.8.4.tgz#3f96a522b49274d02e1dbb3172a6c9878e608078"
+  integrity sha512-0MoidZ3Y/9WrLPELGOdN3YttCyqbOPbhxu/SMJQec5ntNEkhlFna4Pcj7jA2WblxqBvSF+YokCNG06P6GbDwTw==
   dependencies:
     "@babel/runtime" "^7.9.2"
     "@ts-gql/config" "^0.9.1"
@@ -10218,7 +10218,7 @@ next-with-apollo@^5.3.0:
   dependencies:
     isomorphic-unfetch "^3.0.0"
 
-next@^12.2.4, next@^12.2.5:
+next@12.2.5, next@^12.2.4, next@^12.2.5:
   version "12.2.5"
   resolved "https://registry.yarnpkg.com/next/-/next-12.2.5.tgz#14fb5975e8841fad09553b8ef41fe1393602b717"
   integrity sha512-tBdjqX5XC/oFs/6gxrZhjmiq90YWizUYU6qOWAfat7zJwrwapJ+BYgX2PmiacunXMaRpeVT4vz5MSPSLgNkrpA==
