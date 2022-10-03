@@ -35,7 +35,7 @@
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
     "@changesets/cli": "2.24.4",
-    "@manypkg/cli": "0.19.1",
+    "@manypkg/cli": "0.19.2",
     "@preconstruct/cli": "2.2.1",
     "babel-jest": "^27.5.1",
     "eslint": "7.32.0",
