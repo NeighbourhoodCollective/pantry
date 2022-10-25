@@ -80,7 +80,7 @@
     "@stripe/stripe-js": "^1.35.0",
     "@ts-gql/compiler": "^0.15.3",
     "@ts-gql/eslint-plugin": "^0.8.3",
-    "@ts-gql/next": "^16.0.3",
+    "@ts-gql/next": "^17.0.0",
     "@ts-gql/tag": "^0.7.0",
     "apollo-upload-client": "^17.0.0",
     "core-js": "^3.25.0",

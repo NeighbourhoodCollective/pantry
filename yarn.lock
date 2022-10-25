@@ -4205,10 +4205,10 @@
     find-pkg-json-field-up "^1.0.1"
     slash "^3.0.0"
 
-"@ts-gql/next@^16.0.3":
-  version "16.0.3"
-  resolved "https://registry.yarnpkg.com/@ts-gql/next/-/next-16.0.3.tgz#c2f53e458e413721a11b46239885704cb0665675"
-  integrity sha512-z1L/DocK+Kf+mnYJxjG473XZiy7l8D0Tswh0K4VJ3IbP2eG94UvBHxKlgnOKMFoBqIH0D4VT6R0u5O/miY7KMQ==
+"@ts-gql/next@^17.0.0":
+  version "17.0.0"
+  resolved "https://registry.yarnpkg.com/@ts-gql/next/-/next-17.0.0.tgz#c542e855c09eb4a8197e943166947655ec4271fc"
+  integrity sha512-QXsldrWzzo8EtXrOBZfse+okQPCWDdd7l11s/S5OkkMXdWJR7fUnYXnYQxhuOOEs2WQScvO+vBIUT0l5E4d3YA==
   dependencies:
     "@babel/runtime" "^7.9.2"
 
