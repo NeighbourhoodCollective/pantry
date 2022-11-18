@@ -4,7 +4,7 @@ import type { Request, Response } from 'express';
 import type { KeystoneContext } from '@keystone-6/core/types';
 
 const stripeConfig = new Stripe(process.env.STRIPE_SECRET || '', {
-  apiVersion: '2020-08-27',
+  apiVersion: '2022-08-01',
 });
 
 const graphql = String.raw;
@@ -60,7 +60,8 @@ export async function stripeHook(req: Request, res: Response) {
   const sudo = context.sudo();
   // Check if webhook signing is configured.
   const webhookSecret =
-    process.env.STRIPE_WEBHOOK_SECRET || 'whsec_1234567890123456789012345678901234567890';
+    process.env.STRIPE_WEBHOOK_SECRET ||
+    'whsec_1234567890123456789012345678901234567890';
   if (webhookSecret) {
     // Retrieve the event by verifying the signature using the raw body and secret.
     let event;
@@ -98,7 +99,7 @@ export async function stripeHook(req: Request, res: Response) {
                 }
                 `,
       });
-      
+
       if (!membership) {
         console.log('⚠️  No membership found for checkout.session.completed');
         return res.sendStatus(404);
