@@ -49,7 +49,7 @@
     ]
   },
   "resolutions": {
-    "next": "12.2.5"
+    "next": "12.3.4"
   },
   "packageManager": "yarn@1.22.19"
 }
