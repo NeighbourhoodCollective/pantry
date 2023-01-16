@@ -2679,7 +2679,7 @@
     auto-bind "~4.0.0"
     tslib "~2.4.0"
 
-"@graphql-codegen/typescript@^2.4.8", "@graphql-codegen/typescript@^2.7.3":
+"@graphql-codegen/typescript@^2.7.3":
   version "2.7.3"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript/-/typescript-2.7.3.tgz#ad786a1c74e16eca8e01e7a8f28078e1c24eeb61"
   integrity sha512-EzX/acijXtbG/AwPzho2ZZWaNo00+xAbsRDP+vnT2PwQV3AYq3/5bFvjq1XfAGWbTntdmlYlIwC9hf5bI85WVA==
@@ -4159,17 +4159,16 @@
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-2.0.0.tgz#f544a148d3ab35801c1f633a7441fd87c2e484bf"
   integrity sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==
 
-"@ts-gql/compiler@^0.15.3":
-  version "0.15.3"
-  resolved "https://registry.yarnpkg.com/@ts-gql/compiler/-/compiler-0.15.3.tgz#147147851908d9837a42249a7aa408dfa90da69e"
-  integrity sha512-PkPT8y6YLrZBA/p9Q4DQFwNhTwGl1q6uVTvoJJn8mmnGrdkbuS+6IzWUhWreC9N58uwacmdx4iuQfbot22obnw==
+"@ts-gql/compiler@^0.16.3":
+  version "0.16.3"
+  resolved "https://registry.yarnpkg.com/@ts-gql/compiler/-/compiler-0.16.3.tgz#6547e977c7076781dabfa3cc031ebb8d3a07a8d9"
+  integrity sha512-xnYPwHzLNUKLg4ySBZC95P7gWH4Bw9/SAgmYDbNqDS3z6FR69ZpHfj0uQLkRc2+276cIlpuAZLYYun3LuVK/9w==
   dependencies:
     "@babel/code-frame" "^7.8.3"
     "@babel/parser" "^7.9.6"
     "@babel/runtime" "^7.9.2"
     "@babel/types" "^7.9.6"
     "@graphql-codegen/plugin-helpers" "^2.4.2"
-    "@graphql-codegen/typescript" "^2.4.8"
     "@graphql-codegen/typescript-operations" "^2.3.5"
     "@nodelib/fs.walk" "^1.2.4"
     "@ts-gql/config" "^0.9.1"
