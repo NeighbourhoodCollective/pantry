@@ -123,17 +123,13 @@ export default auth.withAuth(
     },
     lists,
     extendGraphqlSchema,
-    experimental: {
-      enableNextJsGraphqlApiEndpoint: true,
-      generateNextGraphqlAPI: true,
-    },
     session: statelessSessions({
       maxAge: sessionMaxAge,
       secret: sessionSecret,
     }),
     server: {
       healthCheck: true,
-      extendExpressApp: (app, createContext) => {
+      extendExpressApp: (app, baseContext) => {
         app.use(
           '/api/stripe-webhook',
           express.json({
@@ -149,7 +145,7 @@ export default auth.withAuth(
           })
         );
         app.use('/api/stripe-webhook', async (req, res, next) => {
-          (req as any).context = await createContext(req, res);
+          (req as any).context = await baseContext.withRequest(req, res);
           next();
         });
         app.post('/api/stripe-webhook', stripeHook);

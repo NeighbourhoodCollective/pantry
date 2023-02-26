@@ -1,9 +1,11 @@
+import { allowAll } from '@keystone-6/core/access';
 import { list } from '@keystone-6/core';
 import { text, relationship, select, timestamp } from '@keystone-6/core/fields';
 import { document } from '@keystone-6/fields-document';
 import { Lists } from '.keystone/types';
 
 export const Post: Lists.Post = list({
+  access: allowAll,
   fields: {
     title: text(),
     club: relationship({

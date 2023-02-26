@@ -12,6 +12,7 @@ import { rules, isSignedIn, permissions } from '../access';
 import { document } from '@keystone-6/fields-document';
 import stripeConfig from '../lib/stripe';
 import { Lists } from '.keystone/types';
+import Stripe from 'stripe';
 
 export const Variation: Lists.Variation = list({
   hooks: {
@@ -35,9 +36,10 @@ export const Variation: Lists.Variation = list({
     resolveInput: async ({ resolvedData, item, context }) => {
       // If the User is being created and no stripeCutomerId is provided create the stripe customer
       if (!resolvedData.stripePriceId && !item?.stripePriceId) {
+        if (!resolvedData.price || !item?.price) return resolvedData;
         console.log(resolvedData);
         const subscription = await context.query.Subscription.findOne({
-          where: { id: resolvedData.subscription.connect.id },
+          where: { id: resolvedData.subscription?.connect?.id },
           query: `
                 id
                 stripeProductId`,
@@ -47,17 +49,19 @@ export const Variation: Lists.Variation = list({
             ? true
             : false;
         const stripeProductId = subscription.stripeProductId;
-        const unitPriceDollars = resolvedData.price || item?.price;
-        const unitPriceCents = unitPriceDollars * 100;
+        const unitPriceDollars = resolvedData.price || item?.price || 0;
+        // TODO: fix this type
+        const unitPriceCents = (unitPriceDollars as number) * 100;
         const price = await stripeConfig.prices.create({
           product: stripeProductId,
           active: active,
           currency: 'aud',
           unit_amount: unitPriceCents,
           recurring: {
-            interval: resolvedData.chargeInterval || item?.chargeInterval,
-            interval_count:
-              resolvedData.chargeIntervalCount || item?.chargeIntervalCount,
+            interval: (resolvedData.chargeInterval ||
+              item?.chargeInterval) as Stripe.Price.Recurring.Interval,
+            interval_count: (resolvedData.chargeIntervalCount ||
+              item?.chargeIntervalCount) as number,
             usage_type: 'licensed',
           },
         });
@@ -89,6 +93,7 @@ export const Variation: Lists.Variation = list({
   },
   access: {
     operation: {
+      query: () => true,
       create: permissions.canManageProducts,
       delete: permissions.canManageProducts,
       update: permissions.canManageProducts,

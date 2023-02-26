@@ -11,9 +11,9 @@ export const User: Lists.User = list({
       if (!resolvedData.stripeCustomerId && !item?.stripeCustomerId) {
         try {
           const customer = await stripeConfig.customers.create({
-            email: resolvedData.email || item?.email,
-            name: resolvedData.name || item?.name,
-            phone: resolvedData.phone || item?.phone,
+            email: (resolvedData.email || item?.email) as string,
+            name: (resolvedData.name || item?.name) as string,
+            phone: (resolvedData.phone || item?.phone) as string,
           });
           resolvedData.stripeCustomerId = customer.id;
         } catch (error) {
@@ -25,7 +25,9 @@ export const User: Lists.User = list({
   },
   access: {
     operation: {
-      create: () => true,
+      create: permissions.canManageUsers,
+      update: isSignedIn,
+      query: isSignedIn,
       delete: permissions.canManageUsers,
     },
     filter: {

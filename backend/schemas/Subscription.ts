@@ -8,6 +8,7 @@ import { Lists } from '.keystone/types';
 export const Subscription: Lists.Subscription = list({
   access: {
     operation: {
+      query: () => true,
       create: permissions.canManageProducts,
       delete: permissions.canManageProducts,
       update: permissions.canManageProducts,
@@ -22,7 +23,7 @@ export const Subscription: Lists.Subscription = list({
       // If the subscription is being created and no stripeProductId is provided, create a new stripe product
       if (!resolvedData.stripeProductId && !item?.stripeProductId) {
         const product = await stripeConfig.products.create({
-          name: item?.name || resolvedData.name,
+          name: (item?.name || resolvedData.name) as string,
         });
         resolvedData.stripeProductId = product.id;
       }

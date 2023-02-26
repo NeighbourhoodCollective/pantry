@@ -9,6 +9,7 @@ export const Role: Lists.Role = list({
     operation: {
       create: permissions.canManageRoles,
       delete: permissions.canManageRoles,
+      query: () => true,
       update: permissions.canManageRoles,
     },
   },

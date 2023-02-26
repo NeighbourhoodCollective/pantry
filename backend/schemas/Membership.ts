@@ -6,6 +6,7 @@ import {
   virtual,
 } from '@keystone-6/core/fields';
 import { list, graphql } from '@keystone-6/core';
+import { allOperations } from '@keystone-6/core/access';
 import { rules, isSignedIn, permissions } from '../access';
 import getContactName from '../lib/getContactName';
 import sendEmail from '../lib/sendEmail';
@@ -15,6 +16,7 @@ import { Lists } from '.keystone/types';
 export const Membership: Lists.Membership = list({
   access: {
     operation: {
+      ...allOperations(isSignedIn),
       create: () => true,
       // only people with the permission can delete themselves!
       // You can't delete yourself

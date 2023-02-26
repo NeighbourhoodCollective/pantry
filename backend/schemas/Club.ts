@@ -2,8 +2,10 @@ import { list } from '@keystone-6/core';
 import { text, relationship, select } from '@keystone-6/core/fields';
 import { document } from '@keystone-6/fields-document';
 import { Lists } from '.keystone/types';
+import { allowAll } from '@keystone-6/core/access';
 
 export const Club: Lists.Club = list({
+  access: allowAll,
   fields: {
     name: text(),
     subscriptions: relationship({

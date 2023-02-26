@@ -48,8 +48,5 @@
       "services/*"
     ]
   },
-  "resolutions": {
-    "next": "12.2.5"
-  },
   "packageManager": "yarn@1.22.19"
 }
