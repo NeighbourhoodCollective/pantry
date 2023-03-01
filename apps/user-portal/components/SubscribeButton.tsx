@@ -1,5 +1,4 @@
 import { Button } from 'react-bootstrap';
-import getConfig from 'next/config';
 import { useMutation } from '@apollo/client';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/dist/client/router';
@@ -53,8 +52,6 @@ export function SubscribeButton({ ...props }) {
   return (
     <Button
       onClick={async () => {
-        console.log(userData.id);
-
         const session = await getStripeSession({
           variables: {
             variationId: variation.id,
