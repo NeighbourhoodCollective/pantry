@@ -24,6 +24,10 @@ module.exports = withTsGql(
           source: '/admin/:admin*',
           destination: `${process.env.BACKEND_BASE_URL}/admin/:admin*`,
         },
+        {
+          source: '/api/stripe-webhook',
+          destination: `${process.env.BACKEND_BASE_URL}/api/stripe-webhook`,
+        },
       ];
     },
     async redirects() {
