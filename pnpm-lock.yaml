@@ -41,6 +41,7 @@ importers:
       '@keystone-ui/fields': ^7.1.1
       '@keystone-ui/icons': ^6.0.1
       '@next/bundle-analyzer': ^13.2.3
+      '@opensaas-clubhouse/backend': workspace:*
       '@stripe/react-stripe-js': ^1.10.0
       '@stripe/stripe-js': ^1.47.0
       '@testing-library/jest-dom': ^5.16.5
@@ -99,6 +100,7 @@ importers:
       '@keystone-ui/fields': 7.1.2_flj5kdxycnetzzjbfp4ntb6x54
       '@keystone-ui/icons': 6.0.2_63dfw6rfgd64rl77ptfma4cvt4
       '@next/bundle-analyzer': 13.2.3
+      '@opensaas-clubhouse/backend': link:../../backend
       '@stripe/react-stripe-js': 1.16.5_zw7zferaqqsd3ootrrf2mrlpoi
       '@stripe/stripe-js': 1.47.0
       '@ts-gql/compiler': 0.16.3_graphql@16.6.0

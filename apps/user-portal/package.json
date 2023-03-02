@@ -65,6 +65,7 @@
     "@keystone-ui/fields": "^7.1.1",
     "@keystone-ui/icons": "^6.0.1",
     "@next/bundle-analyzer": "^13.2.3",
+    "@opensaas-clubhouse/backend": "workspace:*",
     "@stripe/react-stripe-js": "^1.10.0",
     "@stripe/stripe-js": "^1.47.0",
     "@ts-gql/compiler": "^0.16.3",
