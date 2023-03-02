@@ -6,47 +6,31 @@
   "repository": "https://github.com/OpenSaasAU/clubhouse",
   "license": "MIT",
   "author": "Josh Calder <josh@opensaas.com.au>",
-  "workspaces": [
-    "packages/*",
-    "services/*",
-    "apps/*",
-    "backend",
-    "website"
-  ],
   "scripts": {
-    "build": "preconstruct build",
-    "build:backend": "manypkg run backend build",
+    "build": "turbo run build",
+    "build:backend": "turbo run backend build",
+    "build:frontend": "turbo run frontend build",
     "clean": "manypkg exec rm -rf node_modules && manypkg exec rm -rf dist && manypkg exec rm -rf .turbo && manypkg exec rm -rf .next && manypkg exec rm -rf .keystone && rm -rf node_modules",
-    "dev:backend": "manypkg run backend dev",
-    "dev:frontend": "manypkg run frontend dev",
+    "dev:backend": "turbo run backend dev",
+    "dev:frontend": "turbo run frontend dev",
     "dev": "NEXTAUTH_URL=http://localhost:7777 yarn turbo run dev",
-    "postinstall": "preconstruct dev",
-    "lint": "yarn eslint .",
-    "release": "yarn build && changeset publish",
-    "start": "yarn start:$APP_NAME",
-    "start:backend": "cd backend && yarn start",
-    "start:frontend": "cd apps/user-portal && yarn start",
+    "lint": "pnpm eslint .",
+    "start": "pnpm start:$APP_NAME",
+    "start:backend": "turbo run backend start",
+    "start:frontend": "turbo run frontend start",
     "test": "jest"
   },
   "dependencies": {
-    "@babel/core": "^7.18.5",
-    "@babel/eslint-parser": "^7.18.2",
-    "@babel/plugin-transform-runtime": "^7.18.5",
-    "@babel/preset-env": "^7.18.2",
-    "@babel/preset-react": "^7.17.12",
-    "@changesets/cli": "2.24.4",
-    "@manypkg/cli": "0.19.1",
-    "@preconstruct/cli": "2.2.1",
+    "@babel/core": "^7.21.0",
+    "@babel/eslint-parser": "^7.19.1",
+    "@babel/plugin-transform-runtime": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@manypkg/cli": "0.20.0",
     "babel-jest": "^27.5.1",
-    "eslint": "7.32.0",
+    "eslint": "8.35.0",
     "jest": "^27.5.1",
-    "turbo": "^1.4.3"
+    "turbo": "^1.8.3"
   },
-  "preconstruct": {
-    "packages": [
-      "packages/*",
-      "services/*"
-    ]
-  },
-  "packageManager": "yarn@1.22.19"
+  "packageManager": "pnpm@7.28.0"
 }
