@@ -9,7 +9,7 @@
     "build": "keystone build",
     "dev": "keystone dev",
     "postinstall": "keystone postinstall",
-    "start": "yarn keystone prisma migrate deploy && yarn keystone start"
+    "start": "pnpm keystone prisma migrate deploy && yarn keystone start"
   },
   "dependencies": {
     "@aws-sdk/abort-controller": "3.267.0",

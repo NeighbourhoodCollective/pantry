@@ -12,6 +12,7 @@
     "dev": "next -p 7777",
     "postinstall": "ts-gql build",
     "start": "node server.js",
+    "start:next": "next start",
     "test": "NODE_ENV=test jest --watch",
     "ts-gql:build": "ts-gql build",
     "ts-gql:watch": "ts-gql watch"

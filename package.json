@@ -18,7 +18,8 @@
     "start": "pnpm start:$APP_NAME",
     "start:backend": "manypkg run backend start",
     "start:frontend": "manypkg run frontend start",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "cd ./backend && pnpm keystone prisma generate"
   },
   "dependencies": {
     "@babel/core": "^7.21.0",
