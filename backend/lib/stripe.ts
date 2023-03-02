@@ -1,10 +1,9 @@
 import Stripe from 'stripe';
 
-import type { Request, Response } from 'express';
 import type { KeystoneContext } from '@keystone-6/core/types';
 
 const stripeConfig = new Stripe(process.env.STRIPE_SECRET || '', {
-  apiVersion: '2022-08-01',
+  apiVersion: '2022-11-15',
 });
 
 const graphql = String.raw;
@@ -53,7 +52,7 @@ export const stripePortalSession = async ({
   return portalSession;
 };
 
-export async function stripeHook(req: Request, res: Response) {
+export async function stripeHook(req: any, res: any) {
   const context = (req as any).context as KeystoneContext;
   let data;
   let eventType;

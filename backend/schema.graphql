@@ -930,7 +930,6 @@ type Mutation {
   deleteUsers(where: [UserWhereUniqueInput!]!): [User]
   endSession: Boolean!
   membershipSignup(variationId: ID!, returnUrl: String!): JSON
-  customSignup(email: String!, name: String!, password: String, preferredName: String, phone: String!, phoneType: String, birthYear: Int, contact: Boolean, createUser: Boolean, suburb: String): JSON
   stripeManage(returnUrl: String!): JSON
 }
 

@@ -8,6 +8,7 @@ module.exports = withTsGql({
     publicUrl: process.env.PUBLIC_URL,
     supportEmail: process.env.SUPPORT_EMAIL,
   },
+  transpilePackages: ["@opensaas-clubhouse/backend"],
   experimental: {
     scrollRestoration: true,
     appDir: true,
@@ -18,10 +19,6 @@ module.exports = withTsGql({
       {
         source: '/api/auth/:auth*',
         destination: `${process.env.BACKEND_BASE_URL}/admin/api/auth/:auth*`,
-      },
-      {
-        source: '/api/graphql',
-        destination: `${process.env.BACKEND_BASE_URL}/api/graphql`,
       },
       {
         source: '/admin/:admin*',
