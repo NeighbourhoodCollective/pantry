@@ -20,6 +20,7 @@ module.exports = withTsGql({
   experimental: {
     scrollRestoration: true,
     appDir: true,
+    serverComponentsExternalPackages: ['graphql'],
   },
   async rewrites() {
     return [
