@@ -1,4 +1,4 @@
-import { Navbar, Nav, Button, Container } from 'react-bootstrap';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -6,25 +6,25 @@ import { useSession } from 'next-auth/react';
 import { SigninButton } from '../SigninButton';
 
 export function Header() {
-  const { data, status } = useSession();
+  const { data } = useSession();
   return (
     <Navbar bg="light" expand="sm">
       <Container>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav>
-            <Link href="/pantry" passHref>
+            <Link href="/pantry" passHref legacyBehavior>
               <Nav.Link>Home</Nav.Link>
             </Link>
-            <Link href="/pantry/posts" passHref>
+            <Link href="/pantry/posts" passHref legacyBehavior>
               <Nav.Link>News</Nav.Link>
             </Link>
             {data && (
               <>
-                <Link href="/pantry/subscriptions" passHref>
+                <Link href="/pantry/subscriptions" passHref legacyBehavior>
                   <Nav.Link>Pantry Membership</Nav.Link>
                 </Link>
-                <Link href="/profile" passHref>
+                <Link href="/profile" passHref legacyBehavior>
                   <Nav.Link>Profile</Nav.Link>
                 </Link>
               </>

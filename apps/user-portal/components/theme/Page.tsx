@@ -1,10 +1,9 @@
-import PropTypes from 'prop-types';
 import { Container } from 'react-bootstrap';
 import React from 'react';
 import { Footer } from './Footer';
 import { Header } from './Header';
 
-export function Page({ children }) {
+export function Page({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Header />

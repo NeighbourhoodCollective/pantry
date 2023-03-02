@@ -1,7 +1,6 @@
 import { useRouter } from 'next/dist/client/router';
-import getConfig from 'next/config';
 import Link from 'next/link';
-import { useForm, useUser } from '../../lib/form';
+import { useUser } from '../../lib/form';
 import { ManageStripeButton } from '../../components/ManageStripeButton';
 
 export default function MyMembership() {
@@ -9,8 +8,6 @@ export default function MyMembership() {
   const memberships = user?.memberships || [];
   const router = useRouter();
   const { club }: { club?: string } = router.query;
-
-  const { publicRuntimeConfig } = getConfig();
 
   // if user has membership
   if (memberships.length === 0) {

@@ -2,9 +2,9 @@
 import { Container, Button } from 'react-bootstrap';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import { SignupButton } from '../components/SignupButton';
-import { useUser, CURRENT_USER_QUERY } from '../lib/form';
+import { useUser } from '../lib/form';
 
-export default function SignupPage({ ...props }) {
+export default function SignupPage() {
   const user = useUser();
 
   const { data, status } = useSession();

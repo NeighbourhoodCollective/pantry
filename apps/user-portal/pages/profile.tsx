@@ -1,7 +1,7 @@
 import { Button, Form, Alert, Row } from 'react-bootstrap';
-import { FormEvent, useState } from 'react';
+import { useState } from 'react';
 
-import { useQuery, useMutation } from '@apollo/client';
+import { useMutation } from '@apollo/client';
 // import { useRouter } from 'next/dist/client/router';
 import { gql } from '@ts-gql/tag/no-transform';
 import nProgress from 'nprogress';

@@ -7,7 +7,7 @@ import { SigninButton } from './SigninButton';
 import { User } from '../types';
 
 export function SubscribeButton({ ...props }) {
-  const { data: userData, status } = useSession();
+  const { data: userData } = useSession();
   const router = useRouter();
 
   const { variation, subscription, club } = props;

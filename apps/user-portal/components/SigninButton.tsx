@@ -1,10 +1,9 @@
 import { signIn, signOut, useSession } from 'next-auth/react';
-import { Navbar, Nav, Button } from 'react-bootstrap';
-import Link from 'next/link';
+import { Button } from 'react-bootstrap';
 
 export function SigninButton({ ...props }) {
   const { returnUrl } = props;
-  const { data, status } = useSession();
+  const { data } = useSession();
   if (!data?.itemId)
     return (
       <Button

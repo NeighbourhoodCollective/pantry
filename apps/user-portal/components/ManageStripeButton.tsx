@@ -7,7 +7,7 @@ import { User } from '../types';
 import { SigninButton } from './SigninButton';
 
 export function ManageStripeButton() {
-  const { data: userData, status } = useSession();
+  const { data: userData } = useSession();
   const userSession = userData?.data as User;
   const router = useRouter();
 

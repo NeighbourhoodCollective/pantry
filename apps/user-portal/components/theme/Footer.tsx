@@ -1,7 +1,4 @@
 import { Navbar } from 'react-bootstrap';
-import { useRouter } from 'next/dist/client/router';
-import Image from 'next/image';
-import React from 'react';
 import getConfig from 'next/config';
 
 export function Footer() {

@@ -1,5 +1,4 @@
 import { Form } from 'react-bootstrap';
-import getConfig from 'next/config';
 import { Field } from './householdMembers';
 
 export function User({ ...props }) {
