@@ -1,6 +1,14 @@
 const { withTsGql } = require('@ts-gql/next');
+const { PrismaPlugin } = require('@prisma/nextjs-monorepo-workaround-plugin')
+
 /** @type {import('next').NextConfig} */
 module.exports = withTsGql({
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.plugins = [...config.plugins, new PrismaPlugin()]
+    }
+    return config
+  },
   publicRuntimeConfig: {
     backend: process.env.BACKEND,
     stripeKey: process.env.STRIPE_KEY,

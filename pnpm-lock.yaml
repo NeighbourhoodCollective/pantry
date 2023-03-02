@@ -42,6 +42,7 @@ importers:
       '@keystone-ui/icons': ^6.0.1
       '@next/bundle-analyzer': ^13.2.3
       '@opensaas-clubhouse/backend': workspace:*
+      '@prisma/nextjs-monorepo-workaround-plugin': ^4.11.0
       '@stripe/react-stripe-js': ^1.10.0
       '@stripe/stripe-js': ^1.47.0
       '@testing-library/jest-dom': ^5.16.5
@@ -53,6 +54,7 @@ importers:
       '@ts-gql/tag': ^0.7.0
       '@types/apollo-upload-client': ^17.0.0
       '@types/lodash': ^4.14.184
+      '@types/node': 18.14.4
       '@types/nprogress': ^0.2.0
       '@types/react': 18.0.18
       '@types/react-dom': ^18.0.6
@@ -101,6 +103,7 @@ importers:
       '@keystone-ui/icons': 6.0.2_63dfw6rfgd64rl77ptfma4cvt4
       '@next/bundle-analyzer': 13.2.3
       '@opensaas-clubhouse/backend': link:../../backend
+      '@prisma/nextjs-monorepo-workaround-plugin': 4.11.0
       '@stripe/react-stripe-js': 1.16.5_zw7zferaqqsd3ootrrf2mrlpoi
       '@stripe/stripe-js': 1.47.0
       '@ts-gql/compiler': 0.16.3_graphql@16.6.0
@@ -138,6 +141,7 @@ importers:
       '@testing-library/user-event': 13.5.0
       '@types/apollo-upload-client': 17.0.2_biqbaboplfbrettd7655fr4n2y
       '@types/lodash': 4.14.191
+      '@types/node': 18.14.4
       '@types/nprogress': 0.2.0
       '@types/react': 18.0.18
       '@types/react-dom': 18.0.11
@@ -4965,6 +4969,10 @@ packages:
       - aws-crt
       - pg-native
       - supports-color
+    dev: false
+
+  /@prisma/nextjs-monorepo-workaround-plugin/4.11.0:
+    resolution: {integrity: sha512-h9Y6Q2fbxsyBbquqdmZpLTVgOaVKbrTfk7V5FUQGtPTeaqGa+jA/DR7ABkunGGgbnKsGrkSijmISrFBPaSh1Yg==}
     dev: false
 
   /@prisma/prisma-fmt-wasm/4.11.0-57.8fde8fef4033376662cad983758335009d522acb:

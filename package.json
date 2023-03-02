@@ -8,16 +8,16 @@
   "author": "Josh Calder <josh@opensaas.com.au>",
   "scripts": {
     "build": "turbo run build",
-    "build:backend": "turbo run backend build",
-    "build:frontend": "turbo run frontend build",
+    "build:backend": "manypkg run backend build",
+    "build:frontend": "manypkg run frontend build",
     "clean": "manypkg exec rm -rf node_modules && manypkg exec rm -rf dist && manypkg exec rm -rf .turbo && manypkg exec rm -rf .next && manypkg exec rm -rf .keystone && rm -rf node_modules",
-    "dev:backend": "turbo run backend dev",
-    "dev:frontend": "turbo run frontend dev",
+    "dev:backend": "manypkg run backend dev",
+    "dev:frontend": "manypkg run frontend dev",
     "dev": "NEXTAUTH_URL=http://localhost:7777 yarn turbo run dev",
     "lint": "pnpm eslint .",
     "start": "pnpm start:$APP_NAME",
-    "start:backend": "turbo run backend start",
-    "start:frontend": "turbo run frontend start",
+    "start:backend": "manypkg run backend start",
+    "start:frontend": "manypkg run frontend start",
     "test": "jest"
   },
   "dependencies": {
