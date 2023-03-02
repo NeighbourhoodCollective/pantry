@@ -2,6 +2,8 @@
   "name": "@opensaas-clubhouse/backend",
   "version": "2.0.0",
   "private": true,
+  "main": "context.ts",
+  "types": "context.ts",
   "repository": "https://github.com/OpenSaasAU/clubhouse/tree/master/backend",
   "scripts": {
     "build": "keystone build",

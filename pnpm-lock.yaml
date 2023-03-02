@@ -30,6 +30,8 @@ importers:
     specifiers:
       '@apollo/client': ^3.6.9
       '@apollo/react-testing': ^4.0.0
+      '@apollo/server': ^4.4.0
+      '@as-integrations/next': ^1.2.0
       '@babel/core': ^7.18.5
       '@babel/eslint-parser': ^7.18.2
       '@emotion/css': ^11.10.0
@@ -87,6 +89,8 @@ importers:
       waait: ^1.0.5
     dependencies:
       '@apollo/client': 3.7.9_gdcq4dv6opitr3wbfwyjmanyra
+      '@apollo/server': 4.4.0_graphql@16.6.0
+      '@as-integrations/next': 1.2.0_myjwqm2ijanhcmsfx3merqlxmm
       '@babel/core': 7.21.0
       '@emotion/css': 11.10.6
       '@emotion/react': 11.10.6_7v64pk2mkrohwh22gx7lrz5ive
@@ -462,6 +466,17 @@ packages:
     transitivePeerDependencies:
       - encoding
       - supports-color
+    dev: false
+
+  /@as-integrations/next/1.2.0_myjwqm2ijanhcmsfx3merqlxmm:
+    resolution: {integrity: sha512-d79OM/YMv7OCe5w6ow0m4qaE21+P7CKnMegMxoGxu0qMsDCCwDsYot56ailuC+XkY3iPEDwvBfKJyA7zWkXdCA==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@apollo/server': ^4.0.0
+      next: ^12.0.0 || ^13.0.0
+    dependencies:
+      '@apollo/server': 4.4.0_graphql@16.6.0
+      next: 13.2.3_6m24vuloj5ihw4zc5lbsktc4fu
     dev: false
 
   /@aws-crypto/crc32/3.0.0:

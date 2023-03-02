@@ -6,11 +6,10 @@ import { config } from '@keystone-6/core';
 import { statelessSessions } from '@keystone-6/core/session';
 import { createAuth } from '@opensaas/keystone-nextjs-auth';
 import AzureB2C from '@opensaas/keystone-nextjs-auth/providers/azure-ad-b2c';
-import { stripeHook } from './lib/stripe';
+//import { stripeHook } from './lib/stripe';
 import { permissionsList } from './schemas/roleFields';
 
-import express from 'express';
-import url from 'url';
+//import url from 'url';
 
 import { lists } from './schemas';
 
@@ -128,29 +127,29 @@ export default auth.withAuth(
       maxAge: sessionMaxAge,
       secret: sessionSecret,
     }),
-    server: {
-      healthCheck: true,
-      extendExpressApp: (app, baseContext) => {
-        app.use(
-          '/api/stripe-webhook',
-          express.json({
-            // We need the raw body to verify webhook signatures.
-            // Let's compute it only when hitting the Stripe webhook endpoint.
-            verify: function (req, res, buf) {
-              const pathname = url.parse(req?.url!).pathname;
-
-              if (req.method === 'POST') {
-                (req as any).rawBody = buf.toString();
-              }
-            },
-          })
-        );
-        app.use('/api/stripe-webhook', async (req, res, next) => {
-          (req as any).context = await baseContext.withRequest(req, res);
-          next();
-        });
-        app.post('/api/stripe-webhook', stripeHook);
-      },
-    },
+    //server: {
+    //healthCheck: true,
+    //extendExpressApp: (app, baseContext) => {
+    //  app.use(
+    //    '/api/stripe-webhook',
+    //    express.json({
+    //      // We need the raw body to verify webhook signatures.
+    //      // Let's compute it only when hitting the Stripe webhook endpoint.
+    //      verify: function (req, res, buf) {
+    //        const pathname = url.parse(req?.url!).pathname;
+    //
+    //        if (req.method === 'POST') {
+    //          (req as any).rawBody = buf.toString();
+    //        }
+    //      },
+    //    })
+    //  );
+    //  app.use('/api/stripe-webhook', async (req, res, next) => {
+    //    (req as any).context = await baseContext.withRequest(req, res);
+    //    next();
+    //  });
+    //  app.post('/api/stripe-webhook', stripeHook);
+    //},
+    //},
   })
 );
