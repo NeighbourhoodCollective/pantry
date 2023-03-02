@@ -12,6 +12,8 @@
     "start": "yarn keystone prisma migrate deploy && yarn keystone start"
   },
   "dependencies": {
+    "@aws-sdk/abort-controller": "3.267.0",
+    "@aws-sdk/signature-v4-crt": "3.267.0",
     "@emotion/css": "^11.10.0",
     "@graphql-tools/schema": "^9.0.0",
     "@keystone-6/core": "^5.1.0",
@@ -22,6 +24,7 @@
     "@opensaas/keystone-nextjs-auth": "27.0.0",
     "@prisma/client": "4.11.0",
     "@sendgrid/mail": "7.7.0",
+    "aws-crt": "1.15.9",
     "cuid": "2.1.8",
     "dotenv": "16.0.1",
     "express": "4.18.1",
