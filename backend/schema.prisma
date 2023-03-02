@@ -9,7 +9,7 @@ datasource postgresql {
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../node_modules/.prisma/client"
+  output   = "__generated__/prisma/client"
 }
 
 model Club {
