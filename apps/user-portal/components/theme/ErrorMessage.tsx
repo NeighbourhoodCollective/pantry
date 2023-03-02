@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
 
-import PropTypes from 'prop-types';
-
 const ErrorStyles = styled.div`
   padding: 2rem;
   background: white;
@@ -46,8 +44,4 @@ export function DisplayError({ error }: { error: any }) {
 
 DisplayError.defaultProps = {
   error: {},
-};
-
-DisplayError.propTypes = {
-  error: PropTypes.object,
 };
