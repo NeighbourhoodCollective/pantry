@@ -7,6 +7,7 @@
   "repository": "https://github.com/OpenSaasAU/clubhouse/tree/master/backend",
   "scripts": {
     "build": "keystone build --no-ui",
+    "build:admin": "keystone build",
     "dev": "keystone dev",
     "postinstall": "keystone postinstall",
     "start": "pnpm keystone prisma migrate deploy && yarn keystone start"
