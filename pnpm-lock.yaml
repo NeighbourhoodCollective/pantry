@@ -174,7 +174,7 @@ importers:
       '@keystone-ui/button': ^7.0.1
       '@keystone-ui/fields': ^7.1.1
       '@keystone-ui/icons': ^6.0.1
-      '@opensaas/keystone-nextjs-auth': 27.0.0
+      '@opensaas/keystone-nextjs-auth': 27.1.0
       '@prisma/client': 4.11.0
       '@sendgrid/mail': 7.7.0
       aws-crt: 1.15.9
@@ -198,7 +198,7 @@ importers:
       '@keystone-ui/button': 7.0.2_react-dom@18.2.0
       '@keystone-ui/fields': 7.1.2_react-dom@18.2.0
       '@keystone-ui/icons': 6.0.2_biqbaboplfbrettd7655fr4n2y
-      '@opensaas/keystone-nextjs-auth': 27.0.0_q2v6idm7nmnynw2rxot4g2euba
+      '@opensaas/keystone-nextjs-auth': 27.1.0_q2v6idm7nmnynw2rxot4g2euba
       '@prisma/client': 4.11.0
       '@sendgrid/mail': 7.7.0
       aws-crt: 1.15.9
@@ -4807,8 +4807,8 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
 
-  /@opensaas/keystone-nextjs-auth/27.0.0_q2v6idm7nmnynw2rxot4g2euba:
-    resolution: {integrity: sha512-HPi+jB1ljo8eoF3BGDVUrZWSJvwICuy+vryujbeVL+IvNFaIuXnrTMogBQr5c+P9NR2rMPbCgwwZ8+I7QDuXwg==}
+  /@opensaas/keystone-nextjs-auth/27.1.0_q2v6idm7nmnynw2rxot4g2euba:
+    resolution: {integrity: sha512-EcfE4ildQyPBOm/Ezbwu+Zh+B3JHSDLDJ2ZDfzdXfKAKe9N6CNFVWxsrNzabpUDrFPt22PwY8f0l/CwznMhm9A==}
     peerDependencies:
       '@keystone-6/core': 5.0.0
       react: ^18.2.0
