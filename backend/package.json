@@ -6,10 +6,10 @@
   "types": "context.ts",
   "repository": "https://github.com/OpenSaasAU/clubhouse/tree/master/backend",
   "scripts": {
-    "build": "keystone build --no-ui",
+    "build": "keystone build --no-ui && keystone prisma generate --data-proxy",
     "build:admin": "keystone build",
     "dev": "keystone dev",
-    "postinstall": "keystone postinstall",
+    "postinstall": "keystone postinstall && keystone prisma generate --data-proxy",
     "start": "pnpm keystone prisma migrate deploy && yarn keystone start"
   },
   "dependencies": {
