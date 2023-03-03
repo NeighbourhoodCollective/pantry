@@ -23,7 +23,8 @@ module.exports = withTsGql({
     serverComponentsExternalPackages: ['graphql'],
   },
   async rewrites() {
-    return [
+    return {
+      beforeFiles: [
       {
         source: '/api/auth/:auth*',
         destination: `${process.env.BACKEND_BASE_URL}/admin/api/auth/:auth*`,
@@ -36,7 +37,8 @@ module.exports = withTsGql({
         source: '/api/stripe-webhook',
         destination: `${process.env.BACKEND_BASE_URL}/api/stripe-webhook`,
       },
-    ];
+    ]
+  };
   },
   async redirects() {
     return [
@@ -45,6 +47,6 @@ module.exports = withTsGql({
         destination: '/pantry',
         permanent: false,
       },
-    ];
+    ]
   },
 });
