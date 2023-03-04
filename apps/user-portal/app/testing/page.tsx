@@ -1,8 +1,7 @@
-import { PrismaClient } from "@prisma/client";
+import { keystoneContext } from "@opensaas-clubhouse/backend";
 
-const prisma = new PrismaClient({ log: ["query", "info", "warn", "error"] });
 export default async function Page() {
-    const clubs = await prisma.club.findMany();
+    const clubs = await keystoneContext.prisma.club.findMany();
     return (
         <div>
             <h1>Clubs</h1>
