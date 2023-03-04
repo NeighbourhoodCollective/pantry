@@ -60,9 +60,8 @@ const firstUser = process.env.FIRST_USER_SUBJECT_ID;
 export default auth.withAuth(
   config({
     db: {
-      prismaClientPath: '__generated__/prisma/client',
+      prismaClientPath: '../node_modules/.prisma/client',
       provider: 'postgresql',
-      useMigrations: true,
       onConnect: async (context: KeystoneContext) => {
         if (!firstUser) {
           console.log(
