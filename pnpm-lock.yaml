@@ -1,5 +1,10 @@
 lockfileVersion: 5.4
 
+patchedDependencies:
+  '@keystone-6/core@5.1.0':
+    hash: e5votvgr4hrf3pw7dogmaf67qq
+    path: patches/@keystone-6__core@5.1.0.patch
+
 importers:
 
   .:
@@ -198,7 +203,7 @@ importers:
       '@aws-sdk/signature-v4-crt': 3.267.0
       '@emotion/css': 11.10.6
       '@graphql-tools/schema': 9.0.16_graphql@16.6.0
-      '@keystone-6/core': 5.1.0_7icswtqfqvzce7adm6bxb2qp3u
+      '@keystone-6/core': 5.1.0_e5votvgr4hrf3pw7dogmaf67qq_7icswtqfqvzce7adm6bxb2qp3u
       '@keystone-6/fields-document': 7.0.0_a6ykijgkmukevfbthux2oliev4
       '@keystone-ui/button': 7.0.2_react-dom@18.2.0
       '@keystone-ui/fields': 7.1.2_react-dom@18.2.0
@@ -4171,7 +4176,7 @@ packages:
     resolution: {integrity: sha512-retLUN4TwCJ0QJDi9OCJwYVaXAz93NeOkEtEQL98M2bykBOxmURlP0YlfsuE46kItOOVZIWRYC3KsSLhQ1R2Qw==}
     dev: false
 
-  /@keystone-6/core/5.1.0_7icswtqfqvzce7adm6bxb2qp3u:
+  /@keystone-6/core/5.1.0_e5votvgr4hrf3pw7dogmaf67qq_7icswtqfqvzce7adm6bxb2qp3u:
     resolution: {integrity: sha512-Mnt1cW236cgbpoVHsA0tgCxV1X3ravKAZD+jSlYVQYeMFWZDV/lKXSywCEc+gJei2Nojqm/1OvfdrPsdfuCaqA==}
     hasBin: true
     dependencies:
@@ -4280,6 +4285,7 @@ packages:
       - subscriptions-transport-ws
       - supports-color
     dev: false
+    patched: true
 
   /@keystone-6/document-renderer/1.1.2_react@18.2.0:
     resolution: {integrity: sha512-fxnQL6xYTK/2xSrZ0dzBTC1Qpa4VVeXmZ+7mMvaZOWquttgvDQzBRY57q9zScRa0dAALNWU1xzq14OL8Kc+eBw==}
@@ -4300,7 +4306,7 @@ packages:
       '@dnd-kit/modifiers': 6.0.1_52scne4zmdeyjh2otzkgz2xfvu
       '@dnd-kit/sortable': 7.0.2_52scne4zmdeyjh2otzkgz2xfvu
       '@emotion/weak-memoize': 0.3.0
-      '@keystone-6/core': 5.1.0_7icswtqfqvzce7adm6bxb2qp3u
+      '@keystone-6/core': 5.1.0_e5votvgr4hrf3pw7dogmaf67qq_7icswtqfqvzce7adm6bxb2qp3u
       '@keystone-6/document-renderer': 1.1.2_react@18.2.0
       '@keystone-ui/button': 7.0.2_flj5kdxycnetzzjbfp4ntb6x54
       '@keystone-ui/core': 5.0.2_63dfw6rfgd64rl77ptfma4cvt4
@@ -4822,7 +4828,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.21.0
       '@babel/runtime-corejs3': 7.21.0
-      '@keystone-6/core': 5.1.0_7icswtqfqvzce7adm6bxb2qp3u
+      '@keystone-6/core': 5.1.0_e5votvgr4hrf3pw7dogmaf67qq_7icswtqfqvzce7adm6bxb2qp3u
       '@types/ejs': 3.1.2
       cookie: 0.5.0
       cross-fetch: 3.1.5
@@ -10923,7 +10929,7 @@ packages:
       '@panva/hkdf': 1.0.4
       cookie: 0.5.0
       jose: 4.13.1
-      next: 13.2.3_biqbaboplfbrettd7655fr4n2y
+      next: 13.2.3_6m24vuloj5ihw4zc5lbsktc4fu
       oauth: 0.9.15
       openid-client: 5.4.0
       preact: 10.13.0

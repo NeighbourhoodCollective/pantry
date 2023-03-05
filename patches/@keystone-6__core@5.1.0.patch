@@ -1,0 +1,241 @@
+diff --git a/___internal-do-not-use-will-break-in-patch/admin-ui/next-config/dist/keystone-6-core-___internal-do-not-use-will-break-in-patch-admin-ui-next-config.cjs.dev.js b/___internal-do-not-use-will-break-in-patch/admin-ui/next-config/dist/keystone-6-core-___internal-do-not-use-will-break-in-patch-admin-ui-next-config.cjs.dev.js
+index 813cbbc740207d7d759ade8dce5eb02333cb5ec2..7aa60a984fbb0eec4da53d0ab413f5bf250678e1 100644
+--- a/___internal-do-not-use-will-break-in-patch/admin-ui/next-config/dist/keystone-6-core-___internal-do-not-use-will-break-in-patch-admin-ui-next-config.cjs.dev.js
++++ b/___internal-do-not-use-will-break-in-patch/admin-ui/next-config/dist/keystone-6-core-___internal-do-not-use-will-break-in-patch-admin-ui-next-config.cjs.dev.js
+@@ -5,41 +5,59 @@ Object.defineProperty(exports, '__esModule', { value: true });
+ var _objectSpread = require('@babel/runtime/helpers/objectSpread2');
+ var Path = require('path');
+ var withPreconstruct = require('@preconstruct/next');
++var PrismaPlugin =
++  require('@prisma/nextjs-monorepo-workaround-plugin').PrismaPlugin;
+ 
+-function _interopDefault (e) { return e && e.__esModule ? e : { 'default': e }; }
++function _interopDefault(e) {
++  return e && e.__esModule ? e : { default: e };
++}
+ 
+-var Path__default = /*#__PURE__*/_interopDefault(Path);
+-var withPreconstruct__default = /*#__PURE__*/_interopDefault(withPreconstruct);
++var Path__default = /*#__PURE__*/ _interopDefault(Path);
++var withPreconstruct__default = /*#__PURE__*/ _interopDefault(withPreconstruct);
+ 
+-const config = withPreconstruct__default["default"]({
++const config = withPreconstruct__default['default']({
+   typescript: {
+-    ignoreBuildErrors: true
++    ignoreBuildErrors: true,
+   },
+   eslint: {
+-    ignoreDuringBuilds: true
++    ignoreDuringBuilds: true,
+   },
+   webpack(config, _ref) {
+-    let {
+-      isServer
+-    } = _ref;
+-    config.resolve.alias = _objectSpread(_objectSpread({}, config.resolve.alias), {}, {
+-      react: Path__default["default"].dirname(require.resolve('react/package.json')),
+-      'react-dom': Path__default["default"].dirname(require.resolve('react-dom/package.json')),
+-      '@keystone-6/core': Path__default["default"].dirname(require.resolve('@keystone-6/core/package.json'))
+-    });
++    let { isServer } = _ref;
++    config.resolve.alias = _objectSpread(
++      _objectSpread({}, config.resolve.alias),
++      {},
++      {
++        react: Path__default['default'].dirname(
++          require.resolve('react/package.json')
++        ),
++        'react-dom': Path__default['default'].dirname(
++          require.resolve('react-dom/package.json')
++        ),
++        '@keystone-6/core': Path__default['default'].dirname(
++          require.resolve('@keystone-6/core/package.json')
++        ),
++      }
++    );
+     if (isServer) {
++      config.plugins = [...config.plugins, new PrismaPlugin()];
+       var _config$node;
+-      config.externals = [...config.externals, /@keystone-6\/core(?!\/___internal-do-not-use-will-break-in-patch\/admin-ui\/id-field-view|\/fields\/types\/[^\/]+\/views)/];
++      config.externals = [
++        ...config.externals,
++        /@keystone-6\/core(?!\/___internal-do-not-use-will-break-in-patch\/admin-ui\/id-field-view|\/fields\/types\/[^\/]+\/views)/,
++      ];
+       // we need to set these to true so that when __dirname/__filename is used
+       // to resolve the location of field views, we will get a path that we can use
+       // rather than just the __dirname/__filename of the generated file.
+       // https://webpack.js.org/configuration/node/#node__filename
+-      (_config$node = config.node) !== null && _config$node !== void 0 ? _config$node : config.node = {};
++      (_config$node = config.node) !== null && _config$node !== void 0
++        ? _config$node
++        : (config.node = {});
+       config.node.__dirname = true;
+       config.node.__filename = true;
+     }
+     return config;
+-  }
++  },
+ });
+ 
+ exports.config = config;
+diff --git a/___internal-do-not-use-will-break-in-patch/admin-ui/next-config/dist/keystone-6-core-___internal-do-not-use-will-break-in-patch-admin-ui-next-config.cjs.prod.js b/___internal-do-not-use-will-break-in-patch/admin-ui/next-config/dist/keystone-6-core-___internal-do-not-use-will-break-in-patch-admin-ui-next-config.cjs.prod.js
+index 813cbbc740207d7d759ade8dce5eb02333cb5ec2..c5cdaf7287456b2a492e4b10eaa69bac920bd530 100644
+--- a/___internal-do-not-use-will-break-in-patch/admin-ui/next-config/dist/keystone-6-core-___internal-do-not-use-will-break-in-patch-admin-ui-next-config.cjs.prod.js
++++ b/___internal-do-not-use-will-break-in-patch/admin-ui/next-config/dist/keystone-6-core-___internal-do-not-use-will-break-in-patch-admin-ui-next-config.cjs.prod.js
+@@ -5,41 +5,59 @@ Object.defineProperty(exports, '__esModule', { value: true });
+ var _objectSpread = require('@babel/runtime/helpers/objectSpread2');
+ var Path = require('path');
+ var withPreconstruct = require('@preconstruct/next');
++const PrismaPlugin =
++  require('@prisma/nextjs-monorepo-workaround-plugin').PrismaPlugin;
+ 
+-function _interopDefault (e) { return e && e.__esModule ? e : { 'default': e }; }
++function _interopDefault(e) {
++  return e && e.__esModule ? e : { default: e };
++}
+ 
+-var Path__default = /*#__PURE__*/_interopDefault(Path);
+-var withPreconstruct__default = /*#__PURE__*/_interopDefault(withPreconstruct);
++var Path__default = /*#__PURE__*/ _interopDefault(Path);
++var withPreconstruct__default = /*#__PURE__*/ _interopDefault(withPreconstruct);
+ 
+-const config = withPreconstruct__default["default"]({
++const config = withPreconstruct__default['default']({
+   typescript: {
+-    ignoreBuildErrors: true
++    ignoreBuildErrors: true,
+   },
+   eslint: {
+-    ignoreDuringBuilds: true
++    ignoreDuringBuilds: true,
+   },
+   webpack(config, _ref) {
+-    let {
+-      isServer
+-    } = _ref;
+-    config.resolve.alias = _objectSpread(_objectSpread({}, config.resolve.alias), {}, {
+-      react: Path__default["default"].dirname(require.resolve('react/package.json')),
+-      'react-dom': Path__default["default"].dirname(require.resolve('react-dom/package.json')),
+-      '@keystone-6/core': Path__default["default"].dirname(require.resolve('@keystone-6/core/package.json'))
+-    });
++    let { isServer } = _ref;
++    config.resolve.alias = _objectSpread(
++      _objectSpread({}, config.resolve.alias),
++      {},
++      {
++        react: Path__default['default'].dirname(
++          require.resolve('react/package.json')
++        ),
++        'react-dom': Path__default['default'].dirname(
++          require.resolve('react-dom/package.json')
++        ),
++        '@keystone-6/core': Path__default['default'].dirname(
++          require.resolve('@keystone-6/core/package.json')
++        ),
++      }
++    );
+     if (isServer) {
++      config.plugins = [...config.plugins, new PrismaPlugin()];
+       var _config$node;
+-      config.externals = [...config.externals, /@keystone-6\/core(?!\/___internal-do-not-use-will-break-in-patch\/admin-ui\/id-field-view|\/fields\/types\/[^\/]+\/views)/];
++      config.externals = [
++        ...config.externals,
++        /@keystone-6\/core(?!\/___internal-do-not-use-will-break-in-patch\/admin-ui\/id-field-view|\/fields\/types\/[^\/]+\/views)/,
++      ];
+       // we need to set these to true so that when __dirname/__filename is used
+       // to resolve the location of field views, we will get a path that we can use
+       // rather than just the __dirname/__filename of the generated file.
+       // https://webpack.js.org/configuration/node/#node__filename
+-      (_config$node = config.node) !== null && _config$node !== void 0 ? _config$node : config.node = {};
++      (_config$node = config.node) !== null && _config$node !== void 0
++        ? _config$node
++        : (config.node = {});
+       config.node.__dirname = true;
+       config.node.__filename = true;
+     }
+     return config;
+-  }
++  },
+ });
+ 
+ exports.config = config;
+diff --git a/___internal-do-not-use-will-break-in-patch/admin-ui/next-config/dist/keystone-6-core-___internal-do-not-use-will-break-in-patch-admin-ui-next-config.esm.js b/___internal-do-not-use-will-break-in-patch/admin-ui/next-config/dist/keystone-6-core-___internal-do-not-use-will-break-in-patch-admin-ui-next-config.esm.js
+index 81b6d6a6435780785c6380c4efd674b703ed5149..635e5fa70f0320f254cc68f880e65fb09fa6f4aa 100644
+--- a/___internal-do-not-use-will-break-in-patch/admin-ui/next-config/dist/keystone-6-core-___internal-do-not-use-will-break-in-patch-admin-ui-next-config.esm.js
++++ b/___internal-do-not-use-will-break-in-patch/admin-ui/next-config/dist/keystone-6-core-___internal-do-not-use-will-break-in-patch-admin-ui-next-config.esm.js
+@@ -1,36 +1,49 @@
+ import _objectSpread from '@babel/runtime/helpers/esm/objectSpread2';
+ import Path__default from 'path';
+ import withPreconstruct from '@preconstruct/next';
++import { PrismaPlugin } from '@prisma/nextjs-monorepo-workaround-plugin';
+ 
+ const config = withPreconstruct({
+   typescript: {
+-    ignoreBuildErrors: true
++    ignoreBuildErrors: true,
+   },
+   eslint: {
+-    ignoreDuringBuilds: true
++    ignoreDuringBuilds: true,
+   },
+   webpack(config, _ref) {
+-    let {
+-      isServer
+-    } = _ref;
+-    config.resolve.alias = _objectSpread(_objectSpread({}, config.resolve.alias), {}, {
+-      react: Path__default.dirname(require.resolve('react/package.json')),
+-      'react-dom': Path__default.dirname(require.resolve('react-dom/package.json')),
+-      '@keystone-6/core': Path__default.dirname(require.resolve('@keystone-6/core/package.json'))
+-    });
++    let { isServer } = _ref;
++    config.resolve.alias = _objectSpread(
++      _objectSpread({}, config.resolve.alias),
++      {},
++      {
++        react: Path__default.dirname(require.resolve('react/package.json')),
++        'react-dom': Path__default.dirname(
++          require.resolve('react-dom/package.json')
++        ),
++        '@keystone-6/core': Path__default.dirname(
++          require.resolve('@keystone-6/core/package.json')
++        ),
++      }
++    );
+     if (isServer) {
++      config.plugins = [...config.plugins, new PrismaPlugin()];
+       var _config$node;
+-      config.externals = [...config.externals, /@keystone-6\/core(?!\/___internal-do-not-use-will-break-in-patch\/admin-ui\/id-field-view|\/fields\/types\/[^\/]+\/views)/];
++      config.externals = [
++        ...config.externals,
++        /@keystone-6\/core(?!\/___internal-do-not-use-will-break-in-patch\/admin-ui\/id-field-view|\/fields\/types\/[^\/]+\/views)/,
++      ];
+       // we need to set these to true so that when __dirname/__filename is used
+       // to resolve the location of field views, we will get a path that we can use
+       // rather than just the __dirname/__filename of the generated file.
+       // https://webpack.js.org/configuration/node/#node__filename
+-      (_config$node = config.node) !== null && _config$node !== void 0 ? _config$node : config.node = {};
++      (_config$node = config.node) !== null && _config$node !== void 0
++        ? _config$node
++        : (config.node = {});
+       config.node.__dirname = true;
+       config.node.__filename = true;
+     }
+     return config;
+-  }
++  },
+ });
+ 
+ export { config };
+diff --git a/package.json b/package.json
+index 27371e93402fc5897de1f4ae9020649a1446a915..93249a263f5d24970857ba8a3c80b35855209b0d 100644
+--- a/package.json
++++ b/package.json
+@@ -237,6 +237,7 @@
+     "@prisma/client": "4.11.0",
+     "@prisma/internals": "4.11.0",
+     "@prisma/migrate": "4.11.0",
++    "@prisma/nextjs-monorepo-workaround-plugin": "4.11.0",
+     "@sindresorhus/slugify": "^1.1.2",
+     "@types/apollo-upload-client": "17.0.2",
+     "@types/bcryptjs": "^2.4.2",
