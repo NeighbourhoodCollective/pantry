@@ -1,14 +1,20 @@
 {
   "pipeline": {
+    "prisma:gen": {
+      "cache": false
+    },
     "build": {
       "dependsOn": [
-        "^build"
+        "prisma:gen"
       ],
       "outputs": [
         ".next/**"
       ]
     },
     "build:admin": {
+      "dependsOn": [
+        "prisma:gen"
+      ],
       "outputs": [
         "backend/.keystone/**"
       ]
