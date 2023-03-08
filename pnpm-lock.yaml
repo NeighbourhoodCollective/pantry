@@ -184,7 +184,6 @@ importers:
       '@keystone-ui/fields': ^7.1.1
       '@keystone-ui/icons': ^6.0.1
       '@opensaas/keystone-nextjs-auth': 27.2.0
-      '@prisma/client': 4.11.0
       '@prisma/nextjs-monorepo-workaround-plugin': 4.11.0
       '@sendgrid/mail': 7.7.0
       aws-crt: 1.15.9
@@ -209,7 +208,6 @@ importers:
       '@keystone-ui/fields': 7.1.2_react-dom@18.2.0
       '@keystone-ui/icons': 6.0.2_biqbaboplfbrettd7655fr4n2y
       '@opensaas/keystone-nextjs-auth': 27.2.0_q2v6idm7nmnynw2rxot4g2euba
-      '@prisma/client': 4.11.0
       '@prisma/nextjs-monorepo-workaround-plugin': 4.11.0
       '@sendgrid/mail': 7.7.0
       aws-crt: 1.15.9
@@ -4947,19 +4945,6 @@ packages:
 
   /@preconstruct/next/4.0.0:
     resolution: {integrity: sha512-vSrc8wFQgBErU7dKTKSQtr/DLWPHcN9jMoiWOAQodB1+B4Kpqqry6QhGYoRm0DQU5gNL+Rcp+Xb350O1E/gjsg==}
-    dev: false
-
-  /@prisma/client/4.11.0:
-    resolution: {integrity: sha512-0INHYkQIqgAjrt7NzhYpeDQi8x3Nvylc2uDngKyFDDj1tTRQ4uV1HnVmd1sQEraeVAN63SOK0dgCKQHlvjL0KA==}
-    engines: {node: '>=14.17'}
-    requiresBuild: true
-    peerDependencies:
-      prisma: '*'
-    peerDependenciesMeta:
-      prisma:
-        optional: true
-    dependencies:
-      '@prisma/engines-version': 4.11.0-57.8fde8fef4033376662cad983758335009d522acb
     dev: false
 
   /@prisma/client/4.11.0_prisma@4.11.0:
