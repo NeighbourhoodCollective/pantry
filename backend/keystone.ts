@@ -60,12 +60,7 @@ const firstUser = process.env.FIRST_USER_SUBJECT_ID;
 export default auth.withAuth(
   config({
     db: {
-      extendPrismaSchema: (schema: string) => {
-        return schema.replace(
-          /(generator [^}]+)}/g,
-          ['$1output = "../node_modules/.prisma/client"', '}'].join('\n')
-        );
-      },
+      prismaClientPath: '../node_modules/.prisma/client',
       provider: 'postgresql',
       onConnect: async (context: KeystoneContext) => {
         if (!firstUser) {
