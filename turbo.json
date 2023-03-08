@@ -5,7 +5,7 @@
     },
     "build": {
       "dependsOn": [
-        "prisma:gen"
+        "^prisma:gen"
       ],
       "outputs": [
         ".next/**"
@@ -13,7 +13,7 @@
     },
     "build:admin": {
       "dependsOn": [
-        "prisma:gen"
+        "^prisma:gen"
       ],
       "outputs": [
         "backend/.keystone/**"
