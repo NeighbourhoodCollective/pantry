@@ -86,7 +86,7 @@ importers:
       lodash: ^4.17.21
       lodash.debounce: ^4.0.8
       next: ^13.2.3
-      next-auth: ^4.20.0
+      next-auth: ^4.20.1
       next-with-apollo: ^5.3.0
       nprogress: ^0.2.0
       prettier: ^2.7.1
@@ -137,7 +137,7 @@ importers:
       lodash: 4.17.21
       lodash.debounce: 4.0.8
       next: 13.2.3_6m24vuloj5ihw4zc5lbsktc4fu
-      next-auth: 4.20.0_nvzgbose6yf6w7ijjprgspqefi
+      next-auth: 4.20.1_nvzgbose6yf6w7ijjprgspqefi
       next-with-apollo: 5.3.0_uduva5b6jjdxl2iwd7e7bi6v6a
       nprogress: 0.2.0
       prop-types: 15.8.1
@@ -10940,31 +10940,6 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /next-auth/4.20.0_nvzgbose6yf6w7ijjprgspqefi:
-    resolution: {integrity: sha512-Ff8Otk76rkZd230GVlf6oyj6K6Hz3Y8A0xr3AmRX1bOPagUWhlb2TBtgmktQlHrPI6QoINfPiAgsAOKTax1z3A==}
-    peerDependencies:
-      next: ^12.2.5 || ^13
-      nodemailer: ^6.6.5
-      react: ^17.0.2 || ^18
-      react-dom: ^17.0.2 || ^18
-    peerDependenciesMeta:
-      nodemailer:
-        optional: true
-    dependencies:
-      '@babel/runtime': 7.21.0
-      '@panva/hkdf': 1.0.4
-      cookie: 0.5.0
-      jose: 4.13.1
-      next: 13.2.3_6m24vuloj5ihw4zc5lbsktc4fu
-      oauth: 0.9.15
-      openid-client: 5.4.0
-      preact: 10.13.0
-      preact-render-to-string: 5.2.6_preact@10.13.0
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-      uuid: 8.3.2
-    dev: false
-
   /next-auth/4.20.1_nvzgbose6yf6w7ijjprgspqefi:
     resolution: {integrity: sha512-ZcTUN4qzzZ/zJYgOW0hMXccpheWtAol8QOMdMts+LYRcsPGsqf2hEityyaKyECQVw1cWInb9dF3wYwI5GZdEmQ==}
     peerDependencies:
@@ -10980,7 +10955,7 @@ packages:
       '@panva/hkdf': 1.0.4
       cookie: 0.5.0
       jose: 4.13.1
-      next: 13.2.3_biqbaboplfbrettd7655fr4n2y
+      next: 13.2.3_6m24vuloj5ihw4zc5lbsktc4fu
       oauth: 0.9.15
       openid-client: 5.4.0
       preact: 10.13.0
