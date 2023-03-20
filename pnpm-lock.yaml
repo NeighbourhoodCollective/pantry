@@ -74,7 +74,7 @@ importers:
       casual: ^1.6.2
       core-js: ^3.25.0
       date-fns: ^2.29.2
-      deepmerge: ^4.2.2
+      deepmerge: ^4.3.1
       downshift: ^6.1.9
       encoding: ^0.1.13
       eslint: 8.35.0
@@ -128,7 +128,7 @@ importers:
       aws-crt: 1.15.9
       core-js: 3.29.0
       date-fns: 2.29.3
-      deepmerge: 4.3.0
+      deepmerge: 4.3.1
       downshift: 6.1.12_react@18.2.0
       encoding: 0.1.13
       eslint-config-next: 13.2.3_ycpbpc6yetojsgtrx3mwntkhsu
@@ -5240,7 +5240,7 @@ packages:
     resolution: {integrity: sha512-3AsAxfN3GDBcXoZ/y1mzAAbKzTtUZ5+ZrHOmWQ279AuaFXUNCh9bPnRpN504bgveTqoW+11IzPg3I0WVgDINpw==}
     engines: {node: '>= 6.0.0'}
     dependencies:
-      deepmerge: 4.3.0
+      deepmerge: 4.3.1
     dev: false
 
   /@sendgrid/mail/7.7.0:
@@ -7458,8 +7458,8 @@ packages:
   /deep-is/0.1.4:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
 
-  /deepmerge/4.3.0:
-    resolution: {integrity: sha512-z2wJZXrmeHdvYJp/Ux55wIjqo81G5Bp4c+oELTW+7ar6SogWHajt5a9gO3s3IDaGSAXjDk0vlQKN3rms8ab3og==}
+  /deepmerge/4.3.1:
+    resolution: {integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==}
     engines: {node: '>=0.10.0'}
 
   /defaults/1.0.4:
@@ -9653,7 +9653,7 @@ packages:
       babel-jest: 27.5.1_@babel+core@7.21.0
       chalk: 4.1.2
       ci-info: 3.8.0
-      deepmerge: 4.3.0
+      deepmerge: 4.3.1
       glob: 7.2.3
       graceful-fs: 4.2.10
       jest-circus: 27.5.1
@@ -12079,7 +12079,7 @@ packages:
     peerDependencies:
       react: '>=16.6.0'
     dependencies:
-      deepmerge: 4.3.0
+      deepmerge: 4.3.1
       load-script: 1.0.0
       memoize-one: 5.2.1
       prop-types: 15.8.1
