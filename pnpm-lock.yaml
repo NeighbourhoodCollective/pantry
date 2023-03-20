@@ -188,7 +188,7 @@ importers:
       '@sendgrid/mail': ^7.7.0
       aws-crt: ^1.15.9
       cuid: ^2.1.8
-      dotenv: ^16.0.1
+      dotenv: ^16.0.3
       graphql: ^16.6.0
       lodash: ^4.17.21
       next: ^13.2.3
