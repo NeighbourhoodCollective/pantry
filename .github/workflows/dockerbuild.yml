@@ -36,14 +36,14 @@ jobs:
           password: ${{ secrets.acrContainerPassword }}
 
       - name: Build and push backend container image to registry
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v4
         with:
           push: true
           tags: collectivereg.azurecr.io/${{ secrets.acrContainerUsername }}/${{ inputs.backendContainerName }}:${{ github.sha }}
           file: ./backend/Dockerfile
 
       - name: Build and push frontend container image to registry
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v4
         with:
           push: true
           tags: collectivereg.azurecr.io/${{ secrets.acrContainerUsername }}/${{ inputs.frontendContainerName }}:${{ github.sha }}
