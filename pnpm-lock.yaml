@@ -194,7 +194,7 @@ importers:
       next: ^13.2.3
       react: ^18.2.0
       react-dom: ^18.2.0
-      stripe: ^11.12.0
+      stripe: ^11.18.0
       typescript: ^4.9.5
     dependencies:
       '@aws-sdk/abort-controller': 3.267.0
@@ -217,7 +217,7 @@ importers:
       next: 13.2.3_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      stripe: 11.12.0
+      stripe: 11.18.0
       typescript: 4.9.5
 
   packages/button:
@@ -249,8 +249,8 @@ packages:
       graphql: 16.6.0
     dev: false
 
-  /@apollo/client/3.7.10_gdcq4dv6opitr3wbfwyjmanyra:
-    resolution: {integrity: sha512-/k1MfrqPKYiPNdHcOzdxg9cEx96vhAGxAcSorzfBvV29XtFQcYW2cPNQOTjK/fpSMtqVo8UNmu5vwQAWD1gfCg==}
+  /@apollo/client/3.7.11_gdcq4dv6opitr3wbfwyjmanyra:
+    resolution: {integrity: sha512-uLg2KtxoAyj9ta7abLxXx8cGRM7HypCkXVmxtL7Ko//N5g37aoJ3ca7VYoFCMUFO1BXBulj+yKVl0U3+ILj5AQ==}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
       graphql-ws: ^5.5.5
@@ -342,7 +342,7 @@ packages:
   /@apollo/react-testing/4.0.0_gdcq4dv6opitr3wbfwyjmanyra:
     resolution: {integrity: sha512-P7Z/flUHpRRZYc3FkIqxZH9XD3FuP2Sgks1IXqGq2Zb7qI0aaTfVeRsLYmZNUcFOh2pTHxs0NXgPnH1VfYOpig==}
     dependencies:
-      '@apollo/client': 3.7.10_gdcq4dv6opitr3wbfwyjmanyra
+      '@apollo/client': 3.7.11_gdcq4dv6opitr3wbfwyjmanyra
     transitivePeerDependencies:
       - graphql
       - graphql-ws
@@ -13044,8 +13044,8 @@ packages:
       escape-string-regexp: 1.0.5
     dev: false
 
-  /stripe/11.12.0:
-    resolution: {integrity: sha512-7yzFyVV/eYpYalfjnw1f9sh/N3r5QVdx5MFtmpOg2QikKVAW4AptXC8P0wj1KNCd/LIo23nTDo0+m9788jHswg==}
+  /stripe/11.18.0:
+    resolution: {integrity: sha512-OUA32uhNoSoM6wOodyFbV+3IBCoO140uzdXmBArQ0S88D4EbH91xl2v+Ml1sKalcFKUBadHLeHfU/p9AbsOfGw==}
     engines: {node: '>=12.*'}
     dependencies:
       '@types/node': 18.14.4
