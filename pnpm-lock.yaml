@@ -99,7 +99,7 @@ importers:
       react-test-renderer: ^18.2.0
       react-transition-group: ^4.4.5
       styled-components: ^5.3.5
-      typescript: ^4.8.2
+      typescript: ^4.9.5
       waait: ^1.0.5
     dependencies:
       '@apollo/client': 3.7.9_gdcq4dv6opitr3wbfwyjmanyra
@@ -249,8 +249,8 @@ packages:
       graphql: 16.6.0
     dev: false
 
-  /@apollo/client/3.7.10_gdcq4dv6opitr3wbfwyjmanyra:
-    resolution: {integrity: sha512-/k1MfrqPKYiPNdHcOzdxg9cEx96vhAGxAcSorzfBvV29XtFQcYW2cPNQOTjK/fpSMtqVo8UNmu5vwQAWD1gfCg==}
+  /@apollo/client/3.7.13_gdcq4dv6opitr3wbfwyjmanyra:
+    resolution: {integrity: sha512-wi63WnO2mhb6uHGB/8x1qIOL4ZtZocrxdHS0VBQ9KwBDkwoP/TdVVgZ29J2WkiAPmJ0SK07ju4R2AjHor1gPxQ==}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
       graphql-ws: ^5.5.5
@@ -342,7 +342,7 @@ packages:
   /@apollo/react-testing/4.0.0_gdcq4dv6opitr3wbfwyjmanyra:
     resolution: {integrity: sha512-P7Z/flUHpRRZYc3FkIqxZH9XD3FuP2Sgks1IXqGq2Zb7qI0aaTfVeRsLYmZNUcFOh2pTHxs0NXgPnH1VfYOpig==}
     dependencies:
-      '@apollo/client': 3.7.10_gdcq4dv6opitr3wbfwyjmanyra
+      '@apollo/client': 3.7.13_gdcq4dv6opitr3wbfwyjmanyra
     transitivePeerDependencies:
       - graphql
       - graphql-ws
