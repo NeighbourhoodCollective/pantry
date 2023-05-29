@@ -98,7 +98,7 @@ importers:
       react-player: ^2.10.1
       react-test-renderer: ^18.2.0
       react-transition-group: ^4.4.5
-      styled-components: ^5.3.5
+      styled-components: ^5.3.11
       typescript: ^4.8.2
       waait: ^1.0.5
     dependencies:
@@ -146,7 +146,7 @@ importers:
       react-dom: 18.2.0_react@18.2.0
       react-player: 2.11.2_react@18.2.0
       react-transition-group: 4.4.5_biqbaboplfbrettd7655fr4n2y
-      styled-components: 5.3.8_biqbaboplfbrettd7655fr4n2y
+      styled-components: 5.3.11_biqbaboplfbrettd7655fr4n2y
       typescript: 4.9.5
       waait: 1.0.5
     devDependencies:
@@ -163,7 +163,7 @@ importers:
       '@types/react-dom': 18.0.11
       '@types/styled-components': 5.1.26
       babel-jest: 27.5.1_@babel+core@7.21.0
-      babel-plugin-styled-components: 2.0.7_styled-components@5.3.8
+      babel-plugin-styled-components: 2.0.7_styled-components@5.3.11
       casual: 1.6.2
       eslint: 8.35.0
       eslint-plugin-prettier: 4.2.1_rlq4czn2p5niyau36qwtjimf2y
@@ -249,8 +249,8 @@ packages:
       graphql: 16.6.0
     dev: false
 
-  /@apollo/client/3.7.10_gdcq4dv6opitr3wbfwyjmanyra:
-    resolution: {integrity: sha512-/k1MfrqPKYiPNdHcOzdxg9cEx96vhAGxAcSorzfBvV29XtFQcYW2cPNQOTjK/fpSMtqVo8UNmu5vwQAWD1gfCg==}
+  /@apollo/client/3.7.14_gdcq4dv6opitr3wbfwyjmanyra:
+    resolution: {integrity: sha512-BRvdkwq5PAXBkjXjboO12uksDm3nrZEqDi4xF97Fk3Mnaa0zDOEfJa7hoKTY9b9KA1EkeWv9BL3i7hSd4SfGBg==}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
       graphql-ws: ^5.5.5
@@ -342,7 +342,7 @@ packages:
   /@apollo/react-testing/4.0.0_gdcq4dv6opitr3wbfwyjmanyra:
     resolution: {integrity: sha512-P7Z/flUHpRRZYc3FkIqxZH9XD3FuP2Sgks1IXqGq2Zb7qI0aaTfVeRsLYmZNUcFOh2pTHxs0NXgPnH1VfYOpig==}
     dependencies:
-      '@apollo/client': 3.7.10_gdcq4dv6opitr3wbfwyjmanyra
+      '@apollo/client': 3.7.14_gdcq4dv6opitr3wbfwyjmanyra
     transitivePeerDependencies:
       - graphql
       - graphql-ws
@@ -6437,7 +6437,7 @@ packages:
       - supports-color
     dev: false
 
-  /babel-plugin-styled-components/2.0.7_styled-components@5.3.8:
+  /babel-plugin-styled-components/2.0.7_styled-components@5.3.11:
     resolution: {integrity: sha512-i7YhvPgVqRKfoQ66toiZ06jPNA3p6ierpfUuEWxNF+fV27Uv5gxBkf8KZLHUCc1nFA9j6+80pYoIpqCeyW3/bA==}
     peerDependencies:
       styled-components: '>= 2'
@@ -6447,7 +6447,7 @@ packages:
       babel-plugin-syntax-jsx: 6.18.0
       lodash: 4.17.21
       picomatch: 2.3.1
-      styled-components: 5.3.8_biqbaboplfbrettd7655fr4n2y
+      styled-components: 5.3.11_biqbaboplfbrettd7655fr4n2y
 
   /babel-plugin-syntax-jsx/6.18.0:
     resolution: {integrity: sha512-qrPaCSo9c8RHNRHIotaufGbuOBN8rtdC4QrrFFc43vyWCCz7Kl7GL1PGaXtMGQZUXrkCjNEgxDfmAuAabr/rlw==}
@@ -13064,8 +13064,8 @@ packages:
       peek-readable: 5.0.0
     dev: false
 
-  /styled-components/5.3.8_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-6jQrlvaJQ16uWVVO0rBfApaTPItkqaG32l3746enNZzpMDxMvzmHzj8rHUg39bvVtom0Y8o8ZzWuchEXKGjVsg==}
+  /styled-components/5.3.11_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-uuzIIfnVkagcVHv9nE0VPlHPSCmXIUGKfJ42LNjxCCTDTL5sgnJ8Z7GZBq0EnLYGln77tPpEpExt2+qa+cZqSw==}
     engines: {node: '>=10'}
     peerDependencies:
       react: '>= 16.8.0'
@@ -13077,7 +13077,7 @@ packages:
       '@emotion/is-prop-valid': 1.2.0
       '@emotion/stylis': 0.8.5
       '@emotion/unitless': 0.7.5
-      babel-plugin-styled-components: 2.0.7_styled-components@5.3.8
+      babel-plugin-styled-components: 2.0.7_styled-components@5.3.11
       css-to-react-native: 3.2.0
       hoist-non-react-statics: 3.3.2
       react: 18.2.0
