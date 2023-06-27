@@ -187,7 +187,7 @@ importers:
       '@prisma/nextjs-monorepo-workaround-plugin': 4.11.0
       '@sendgrid/mail': ^7.7.0
       aws-crt: ^1.15.9
-      cuid: ^2.1.8
+      cuid: ^3.0.0
       dotenv: ^16.0.1
       graphql: ^16.6.0
       lodash: ^4.17.21
@@ -210,7 +210,7 @@ importers:
       '@prisma/nextjs-monorepo-workaround-plugin': 4.11.0
       '@sendgrid/mail': 7.7.0
       aws-crt: 1.15.9
-      cuid: 2.1.8
+      cuid: 3.0.0
       dotenv: 16.0.3
       graphql: 16.6.0
       lodash: 4.17.21
@@ -7327,6 +7327,11 @@ packages:
 
   /cuid/2.1.8:
     resolution: {integrity: sha512-xiEMER6E7TlTPnDxrM4eRiC6TRgjNX9xzEZ5U/Se2YJKr7Mq4pJn/2XEHjl3STcSh96GmkHPcBXLES8M29wyyg==}
+    deprecated: Cuid and other k-sortable and non-cryptographic ids (Ulid, ObjectId, KSUID, all UUIDs) are all insecure. Use @paralleldrive/cuid2 instead.
+    dev: false
+
+  /cuid/3.0.0:
+    resolution: {integrity: sha512-WZYYkHdIDnaxdeP8Misq3Lah5vFjJwGuItJuV+tvMafosMzw0nF297T7mrm8IOWiPJkV6gc7sa8pzx27+w25Zg==}
     deprecated: Cuid and other k-sortable and non-cryptographic ids (Ulid, ObjectId, KSUID, all UUIDs) are all insecure. Use @paralleldrive/cuid2 instead.
     dev: false
 
