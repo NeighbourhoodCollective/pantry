@@ -70,7 +70,7 @@
     "@next/bundle-analyzer": "^13.2.3",
     "@opensaas-clubhouse/backend": "workspace:*",
     "@prisma/client": "4.11.0",
-    "@prisma/nextjs-monorepo-workaround-plugin": "^4.11.0",
+    "@prisma/nextjs-monorepo-workaround-plugin": "^4.16.2",
     "@stripe/react-stripe-js": "^1.10.0",
     "@stripe/stripe-js": "^1.47.0",
     "@ts-gql/compiler": "^0.16.3",
