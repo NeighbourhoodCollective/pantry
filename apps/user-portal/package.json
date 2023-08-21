@@ -57,7 +57,7 @@
   "dependencies": {
     "@apollo/client": "^3.6.9",
     "@apollo/server": "^4.4.0",
-    "@as-integrations/next": "^1.2.0",
+    "@as-integrations/next": "^2.0.2",
     "@aws-sdk/abort-controller": "3.267.0",
     "@aws-sdk/signature-v4-crt": "3.267.0",
     "@babel/core": "^7.18.5",
