@@ -85,7 +85,7 @@
     "downshift": "^6.1.9",
     "encoding": "^0.1.13",
     "eslint-config-next": "^13.2.3",
-    "graphql": "^16.6.0",
+    "graphql": "^16.8.1",
     "graphql-upload": "^16.0.2",
     "lodash": "^4.17.21",
     "lodash.debounce": "^4.0.8",
