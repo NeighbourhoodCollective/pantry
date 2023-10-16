@@ -36,7 +36,7 @@ jobs:
     steps:
       - name: Deploy Backend to Azure Web App
         id: backend-to-webapp
-        uses: azure/webapps-deploy@v2
+        uses: azure/webapps-deploy@v3
         with:
           app-name: ${{ inputs.backendAppName }}
           slot-name: "production"
@@ -45,7 +45,7 @@ jobs:
 
       - name: Deploy Frontend to Azure Web App
         id: frontend-to-webapp
-        uses: azure/webapps-deploy@v2
+        uses: azure/webapps-deploy@v3
         with:
           app-name: "${{ inputs.frontendAppName }}"
           slot-name: "production"
