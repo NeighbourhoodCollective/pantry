@@ -74,7 +74,7 @@
     "@stripe/react-stripe-js": "^1.10.0",
     "@stripe/stripe-js": "^1.47.0",
     "@ts-gql/compiler": "^0.16.3",
-    "@ts-gql/eslint-plugin": "^0.8.5",
+    "@ts-gql/eslint-plugin": "^0.9.1",
     "@ts-gql/next": "^17.0.0",
     "@ts-gql/tag": "^0.7.0",
     "apollo-upload-client": "^17.0.0",
