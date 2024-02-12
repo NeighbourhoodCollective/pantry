@@ -76,7 +76,7 @@
     "@ts-gql/compiler": "^0.16.3",
     "@ts-gql/eslint-plugin": "^0.8.5",
     "@ts-gql/next": "^17.0.0",
-    "@ts-gql/tag": "^0.7.0",
+    "@ts-gql/tag": "^0.7.3",
     "apollo-upload-client": "^17.0.0",
     "aws-crt": "1.15.9",
     "core-js": "^3.25.0",
