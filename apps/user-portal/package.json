@@ -82,7 +82,7 @@
     "core-js": "^3.25.0",
     "date-fns": "^2.29.2",
     "deepmerge": "^4.2.2",
-    "downshift": "^6.1.9",
+    "downshift": "^8.5.0",
     "encoding": "^0.1.13",
     "eslint-config-next": "^13.2.3",
     "graphql": "^16.6.0",
