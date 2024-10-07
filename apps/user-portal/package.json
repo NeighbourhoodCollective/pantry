@@ -71,7 +71,7 @@
     "@opensaas-clubhouse/backend": "workspace:*",
     "@prisma/client": "4.11.0",
     "@prisma/nextjs-monorepo-workaround-plugin": "^4.11.0",
-    "@stripe/react-stripe-js": "^1.10.0",
+    "@stripe/react-stripe-js": "^2.8.1",
     "@stripe/stripe-js": "^1.47.0",
     "@ts-gql/compiler": "^0.16.3",
     "@ts-gql/eslint-plugin": "^0.8.5",
