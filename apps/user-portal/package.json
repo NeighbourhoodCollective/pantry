@@ -56,7 +56,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.6.9",
-    "@apollo/server": "^4.4.0",
+    "@apollo/server": "^4.9.3",
     "@as-integrations/next": "^1.2.0",
     "@aws-sdk/abort-controller": "3.267.0",
     "@aws-sdk/signature-v4-crt": "3.267.0",
