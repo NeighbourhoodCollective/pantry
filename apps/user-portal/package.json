@@ -126,7 +126,7 @@
     "prisma": "^4.11.0",
     "react-test-renderer": "^18.2.0"
   },
-  "packageManager": "pnpm@7.28.0",
+  "packageManager": "pnpm@9.12.2",
   "ts-gql": {
     "mode": "no-transform",
     "schema": "../../backend/schema.graphql"
