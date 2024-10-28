@@ -1,4 +1,4 @@
-FROM node:16-alpine AS builder
+FROM node:20.18.0-alpine AS builder
 RUN apk update
 # Set working directory
 WORKDIR /app
@@ -7,7 +7,7 @@ COPY . .
 RUN turbo prune --scope=@opensaas-clubhouse/frontend --docker
 
 # Add lockfile and package.json's of isolated subworkspace
-FROM node:16-alpine AS installer
+FROM node:20.18.0-alpine AS installer
 RUN apk update
 WORKDIR /app
 COPY --from=builder /app/out/json/ .
@@ -15,7 +15,7 @@ COPY ./backend/schema.graphql ./backend/schema.graphql
 COPY --from=builder /app/out/yarn.lock ./yarn.lock
 RUN yarn install
 
-FROM node:16-alpine AS sourcer
+FROM node:20.18.0-alpine AS sourcer
 RUN apk update
 WORKDIR /app
 COPY --from=installer /app/ .
