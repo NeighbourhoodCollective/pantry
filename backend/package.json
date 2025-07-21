@@ -25,7 +25,7 @@
     "@opensaas/keystone-nextjs-auth": "^27.2.0",
     "@prisma/nextjs-monorepo-workaround-plugin": "4.11.0",
     "@sendgrid/mail": "^7.7.0",
-    "aws-crt": "^1.15.9",
+    "aws-crt": "^1.15.22",
     "cuid": "^2.1.8",
     "dotenv": "^16.0.1",
     "graphql": "^16.6.0",
